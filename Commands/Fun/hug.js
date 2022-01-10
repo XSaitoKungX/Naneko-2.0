@@ -15,17 +15,17 @@ module.exports = {
       "https://media0.giphy.com/media/BXrwTdoho6hkQ/giphy.gif?cid=ecf05e4783c7a876015ea9dd1be3b1cfeb7d9af9183e1f97&rid=giphy.gif",
     ];
     var image = Math.floor(Math.random() * images.length);
-    if (!member) return message.channel.send("you need to mention someone");
+    if (!member) return message.channel.send("🚫 | Sie müssen jemanden erwähnen!");
     let HugEmbed = new Discord.MessageEmbed()
       .setTitle(
-        `${message.author.username} you can't hug yourself but come here I'll hug you`
+        `${message.author.username} brauchen Sie vielleicht eine Umarmung? Dann komm her ich umarme Sie!! :smiling_face_with_3_hearts:`
       )
       .setImage(String([images[image]]))
       .setColor(0xf000ff);
     if (member.id === message.author.id) return message.channel.send(HugEmbed);
     let HugEmbed2 = new Discord.MessageEmbed()
       .setTitle(
-        `${message.author.username} hugs ${member.user.username}, how cute`
+        `${message.author.username} umarmt ${member.user.username}, wie süssss~~ :smiling_face_with_3_hearts:`
       )
       .setImage(String([images[image]]))
       .setColor(0xf000ff);

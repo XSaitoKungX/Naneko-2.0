@@ -9,13 +9,13 @@ module.exports = {
     const user = message.mentions.members.first();
     if (!user)
       return message.channel.send(
-        "Please mention a user you want to give the role to"
+        "🚫 | Bitte erwähnen Sie einen Benutzer, dem Sie die Rolle geben möchten!!"
       );
     const name = args.slice(1).join(" ");
-    if (!name) return message.channel.send("Please type the name of the role");
+    if (!name) return message.channel.send("Bitte geben Sie den Namen der Rolle ein!");
     const role = message.mentions.roles.first();
-    if (!role) return message.channel.send("Couldn't find the Provided Role");
+    if (!role) return message.channel.send("Die bereitgestellte Rolle konnte nicht gefunden werden!");
     await user.roles.add(role),
-      message.channel.send(`${user} now has the ${role} role`);
+      message.channel.send(`${user} hat jetzt die ${role} Rolle bekommen! Congrats!! :tada:`);
   },
 };

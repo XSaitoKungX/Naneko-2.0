@@ -5,7 +5,7 @@ module.exports = {
   description: "Fun Command",
   run: async (client, message, args) => {
     if (!args.length) {
-      return message.channel.send("You need to enter some text");
+      return message.channel.send("🚫 | Sie müssen etwas eingeben!!");
     }
     let msg = "";
     for (let i = 0; i < args.length; i++) {

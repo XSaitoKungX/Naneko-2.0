@@ -11,7 +11,7 @@ module.exports = {
     if (message.channel.type === "dm") return;
     let text = args.join(" ");
     if (!text) {
-      return message.reply("`Usage: =challenge <text>`");
+      return message.reply("`Usage: n.challenge <text>`");
     }
     const link = await client.images.image.challenge({ text: text })
     message.channel.send({

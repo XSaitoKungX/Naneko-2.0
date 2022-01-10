@@ -13,7 +13,7 @@ module.exports = {
 
     ppSize = ppSize * "=";
     const ppSizeEmbed = new Discord.MessageEmbed()
-      .setTitle(`Gay Machine Calculator`)
+      .setTitle(`Rechner für schwule Maschinen`)
       .setDescription(`${target.username}'s pp: 8` + ppSize + "D")
       .setColor("BLUE");
 

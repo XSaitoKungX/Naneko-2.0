@@ -5,7 +5,7 @@ module.exports = {
   name: "cowsay",
   description: "Mke a cow say your message",
   run: async (client, message, args) => {
-    if (!args[0]) return message.channel.send("`Usage: =cowsay <msg>`");
+    if (!args[0]) return message.channel.send("`Usage: n.cowsay <msg>`");
 
     let text = args.join(" ");
     message.channel.send(`\`\`\`${makeSpeech(text, cowAscii)}\`\`\``);

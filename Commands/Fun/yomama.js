@@ -6,7 +6,7 @@ module.exports = {
   run: async (client, message, args) => {
     let ymm = args.join(" ");
     if (!ymm) {
-      return message.channel.send("Please enter Some Text");
+      return message.channel.send("🚫 | Bitte geben Sie etwas Text ein!!");
     }
     message.channel.send(`Yo mama ${ymm}`);
   },

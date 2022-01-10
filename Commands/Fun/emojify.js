@@ -26,11 +26,11 @@ module.exports = {
   aliases: [],
   category: "Fun",
   usage: "emojify <text>",
-  description: "Returns provided text in emojify (emotes) form.",
+  description: "Gibt bereitgestellten Text in Emojify-Form (Emotes) zurück.",
   botPerms: ["MANAGE_MESSAGES"],
   run: async (client, message, args) => {
     if (args.length < 1) {
-      message.channel.send("You must provide some text to emojify!");
+      message.channel.send("🚫 | Sie müssen einen Text zum Emojifizieren angeben!");
     }
     message.delete();
     message.channel.send(

@@ -1,5 +1,5 @@
 {
-  "name": "reaper-2.0",
+  "name": "naneko-2.0",
   "version": "v7.2.0-stable",
   "description": "An Open Source discord bot with lots of features",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Tester",
+  "author": "XSaitoKungX",
   "license": "ISC",
   "dependencies": {
     "@discord-player/downloader": "^3.0.1",
@@ -84,7 +84,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Simpleboy353/REAPER-2.0.git"
+    "url": "git+https://github.com/XSaitoKungX/Naneko-2.0.git"
   },
   "keywords": [
     "open-source",
@@ -96,5 +96,5 @@
   "bugs": {
     "url": "https://github.com/Simpleboy353/REAPER-2.0/issues"
   },
-  "homepage": "https://github.com/Simpleboy353/REAPER-2.0#readme"
+  "homepage": "https://github.com/XSaitoKungX/Naneko-2.0/blob/master/README.md"
 }

@@ -97,10 +97,10 @@ module.exports = async(queue, track, client) => {
 
         if (!queue.connection.paused) {
           queue.setPaused(true);
-          return queue.metadata.followUp({ content: "Paused the music!", ephemeral: true })
+          return queue.metadata.followUp({ content: "Ich habe die Musik angehalten!", ephemeral: true })
         } else if (queue.connection.paused) {
           queue.setPaused(false);
-          return queue.metadata.followUp({ content: "Resumed the music!", ephemeral: true })
+          return queue.metadata.followUp({ content: "Ich habe die Musik wieder abgespielt!", ephemeral: true })
         }
         break;
       
@@ -109,11 +109,11 @@ module.exports = async(queue, track, client) => {
         if (!client.utils.canModifyQueue(queue.metadata)) return;
 
         if (queue.tracks.length < 3 && queue.repeatMode !== 3) {
-          return queue.metadata.followUp({ content: "No more songs in the queue to skip!", ephemeral: true })
+          return queue.metadata.followUp({ content: "Keine Songs mehr in der Warteschlange zum Überspringen!", ephemeral: true })
         } else {
           queue.skip();
           usedStop();
-          queue.metadata.followUp({ content: "Skipped the current song!", ephemeral: true })
+          queue.metadata.followUp({ content: "Ich habe das aktuelle Lied übersprungen!", ephemeral: true })
         }
         break;
 
@@ -122,10 +122,10 @@ module.exports = async(queue, track, client) => {
         if (!client.utils.canModifyQueue(queue.metadata)) return;
         if (!queue.repeatMode) {
           queue.setRepeatMode(QueueRepeatMode.QUEUE)
-          queue.metadata.followUp({ content: "Loop mode has been enabled!", ephemeral: true})
+          queue.metadata.followUp({ content: "Loop mode wurde erfolgreich aktiviert!", ephemeral: true})
         } else if (queue.repeatMode) {
           queue.setRepeatMode(QueueRepeatMode.OFF)
-          queue.metadata.followUp({ content: "Loop mode has been disabled!", ephemeral: true})
+          queue.metadata.followUp({ content: "Loop mode wurde jetzt deaktiviert!", ephemeral: true})
         }
         break;
 
@@ -134,10 +134,10 @@ module.exports = async(queue, track, client) => {
         if (!client.utils.canModifyQueue(queue.metadata)) return;
         if (!queue.repeatMode) {
           queue.setRepeatMode(QueueRepeatMode.TRACK)
-          queue.metadata.followUp({ content: "Repeating current song now!", ephemeral: true})
+          queue.metadata.followUp({ content: "Aktuelles Lied jetzt wiederholen!", ephemeral: true})
         } else if (queue.repeatMode) {
           queue.setRepeatMode(QueueRepeatMode.OFF)
-          queue.metadata.followUp({ content: "Repeating current song now!", ephemeral: true})
+          queue.metadata.followUp({ content: "Aktuelles Lied jetzt wiederholen!", ephemeral: true})
         }
         break;
 
@@ -145,7 +145,7 @@ module.exports = async(queue, track, client) => {
         await button.deferUpdate();
         if (!client.utils.canModifyQueue(queue.metadata)) return;
         queue.stop();
-        queue.metadata.followUp({ content: "Stopped the music!", ephemeral: true })
+        queue.metadata.followUp({ content: "Ich habe die Musik angehalten!", ephemeral: true })
         usedStop();
         collector.stop();
         break;
@@ -153,20 +153,20 @@ module.exports = async(queue, track, client) => {
       case "shuffle":
         await button.deferUpdate();
         if (!client.utils.canModifyQueue(queue.metadata)) return;
-        if (queue.tracks.length < 3) return queue.metadata.followUp({ content: "Need atleast `3` songs in the queue to shuffle!", ephemeral: true})
+        if (queue.tracks.length < 3) return queue.metadata.followUp({ content: "Sie benötigen mindestens `3` Songs in der Warteschlange zum Mischen!", ephemeral: true})
         queue.shuffle();
-        queue.metadata.followUp({ content: "Shuffled the queue!", ephemeral: true})
+        queue.metadata.followUp({ content: "Warteschlange neu gemischt!", ephemeral: true})
         break;
         
       case "volumeLess":
         await button.deferUpdate();
         if (!client.utils.canModifyQueue(queue.metadata)) return;
         let vol;
-        if (queue.volume === 0) return queue.metadata.followUp({ content: "Volume cannot be lower than 0!", ephemeral: true})
+        if (queue.volume === 0) return queue.metadata.followUp({ content: "Lautstärke kann nicht niedriger als 0 sein!", ephemeral: true})
         if (queue.volume - 10 <= 0) vol = 0
         else vol = queue.volume - 10;
         queue.setVolume(Number(vol));
-        queue.metadata.followUp({ content: `Volume set to ${queue.volume}%`, ephemeral: true})
+        queue.metadata.followUp({ content: `Lautstärke auf ${queue.volume}% eingestellt`, ephemeral: true})
         break;
         
       case "volumeMore":
@@ -177,7 +177,7 @@ module.exports = async(queue, track, client) => {
         if (queue.volume + 10 >= 130) volume = 130;
         else volume = queue.volume + 10;
         queue.setVolume(Number(volume));
-        queue.metadata.followUp({ content: `Volume set to ${queue.volume}%`, ephemeral: true})
+        queue.metadata.followUp({ content: `Lautstärke auf ${queue.volume}% eingestellt`, ephemeral: true})
         break;
 
       default: return;
@@ -185,7 +185,7 @@ module.exports = async(queue, track, client) => {
   });
 
     collector.on("end", () => {
-      console.log("Queue ended!")
+      console.log("Warteschlange beendet!")
     })
   });
 }

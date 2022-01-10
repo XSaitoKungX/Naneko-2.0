@@ -19,14 +19,14 @@ module.exports = {
           GuildID: message.guild.id,
         });
 
-        message.channel.send(`**Antiwords is now active!**`);
+        message.channel.send(`**Antiwords ist jetzt aktiv!!**`);
 
         let newData = new antiwordsSchema({
           GuildID: message.guild.id,
         });
         newData.save();
       } else if (!data) {
-        message.channel.send(`**Antiwords is now active**`);
+        message.channel.send(`**Antiwords ist jetzt aktiv!**`);
 
         let newData = new antiwordsSchema({
           GuildID: message.guild.id,
@@ -43,10 +43,10 @@ module.exports = {
           GuildID: message.guild.id,
         });
 
-        return message.channel.send(`**Antiwords has been turned off!**`);
+        return message.channel.send(`**Antiwords wurde erfolgreich deaktiviert!**`);
 
       } else if (!data2) {
-        return message.channel.send(`**Antiwords Isn't Even Setup Bot!**`);
+        return message.channel.send(`**Antiwords würde noch nicht eingerichtet!**`);
       }
     }
   }

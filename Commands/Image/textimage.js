@@ -11,7 +11,7 @@ module.exports = {
     if (message.channel.type === "dm") return;
     let text = args.join(" ");
     if (!text) {
-      return message.reply("You need to provide some text!");
+      return message.reply("🚫 | Sie müssen einen Text angeben!");
     }
     const link = await client.images.image.supreme({ text: text })
     message.channel.send({

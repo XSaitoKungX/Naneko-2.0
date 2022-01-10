@@ -278,7 +278,7 @@ module.exports = {
       if (!queue.connection) { 
         await queue.connect(channel);
       const embed = new MessageEmbed()
-      .setAuthor("REAPER MUSIC", client.user.displayAvatarURL())
+      .setAuthor("Naneko MUSIC", client.user.displayAvatarURL())
       .setDescription(`👍 Joined ${queue.connection.channel.toString()} and 📄 bound to ${queue.metadata.channel.toString()}`)
       .setColor(queue.guild.me.displayColor || "#00FFFF");
 

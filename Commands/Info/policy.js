@@ -7,38 +7,38 @@ module.exports = {
   run: async (client, message, args) => {
     const icon = client.user.avatarURL;
     const embed = new Discord.MessageEmbed()
-      .setTitle("INFINITY BOT PRIVACY POLICY")
+      .setTitle("Naneko BOT PRIVACY POLICY")
       .setThumbnail(icon)
-      .setDescription("By using the bot you agree to our privacy policy")
+      .setDescription("Durch die Nutzung des Bots stimmen Sie unserer Datenschutzerklärung zu")
       .addField(
-        "**WHAT DATA DO WE STORE?**",
+        "**WELCHE DATEN SPEICHERN WIR?**",
         `
-    We do not collect any personal information relating your account like Passwords or any other Credentials. The data we collect includes the User IDs, Server IDs, Channel IDs and Some Role IDs. The bot never requests for any personal data of the users and any act that breaks the Tos of Discord is discouraged by us!`
+        Wir sammeln keine persönlichen Informationen zu Ihrem Account wie Passwörter oder andere Zugangsdaten. Die von uns gesammelten Daten umfassen die Benutzer-IDs, Server-IDs, Kanal-IDs und einige Rollen-IDs. Der Bot fordert niemals persönliche Daten der Benutzer an und jede Handlung, die gegen die Tos of Discord verstößt, wird von uns abgeraten!`
       )
       .addField(
-        "**WHY WE NEED THIS DATA?**",
+        "**WARUM WIR DIESE DATEN BRAUCHEN?**",
         `
-    The data is required for the proper functioning of the bot features like Warning System, Logging and Autoroles. Without this data, our bot will not be able to perform these activities and thus making the features inaccessible for users`
+        Die Daten werden für das ordnungsgemäße Funktionieren der Bot-Funktionen wie Warnsystem, Protokollierung und Autorolen benötigt. Ohne diese Daten kann unser Bot diese Aktivitäten nicht ausführen und macht die Funktionen für Benutzer unzugänglich`
       )
       .addField(
-        "**HOW DO WE USE THIS DATA?**",
+        "**WIE VERWENDEN WIR DIESE DATEN?**",
         `
-    The data is used for the proper functioning for theWarning System, Logging activities and Autorole features of our Bot. User IDs are used to identify the users, Channel IDs are used to send the messages to the desginated channels and Server IDs to identify the Servers and the Role IDs are used for the Autorole feature`
+        Die Daten werden für das ordnungsgemäße Funktionieren des Warnsystems, der Protokollierungsaktivitäten und der Autorole-Funktionen unseres Bots verwendet. Benutzer-IDs werden verwendet, um die Benutzer zu identifizieren, Kanal-IDs werden verwendet, um die Nachrichten an die vorgesehenen Kanäle zu senden, und Server-IDs werden verwendet, um die Server zu identifizieren, und die Rollen-IDs werden für die Autorole-Funktion verwendet`
       )
       .addField(
-        `**HOW LONG DO WE STORE YOUR DATA?**`,
+        `**WIE LANGE SPEICHERN WIR IHRE DATEN?**`,
         `
-    The data is stored as long as the bot is in your Server and as soon as the bot is kicked or removed from the Server, the data is deleted and is no longer to accessable to anyone`
+        Die Daten werden so lange gespeichert, wie sich der Bot auf Ihrem Server befindet und sobald der Bot gekickt oder vom Server entfernt wird, werden die Daten gelöscht und sind für niemanden mehr zugänglich`
       )
       .addField(
-        "**WHO DO WE SHARE THE DATA WITH**?",
+        "**AN WEN WIR DIE DATEN TEILEN**?",
         `
-    We never share your data with anyone except for [MongoDB Inc](https://mongodb.com) whom is a DataBase Company and all the data for our Bot is stored on the MongoDB Servers and According to MongoDB Inc. the data is only accessable by us.`
+        Wir geben Ihre Daten niemals an Dritte weiter, außer an [MongoDB Inc.](https://mongodb.com), die ein Datenbankunternehmen ist und alle Daten für unseren Bot werden auf den MongoDB-Servern gespeichert und laut MongoDB Inc. sind die Daten nur von uns erreichbar.`
       )
       .addField(
-        "**GOT CONCERNS OR QUERIES?**",
+        "**HABEN BEDENKEN ODER FRAGEN?**",
         `
-    If you have any concerns or queries relating our privacy policy or our bot or if you want your data to be removed, You can contact [๖ۣۜℜⱥjͥƤuͣtͫ#0001](https://discord.com/users/661501985517862972) directy on our [Support Server](https://discord.gg/mqWprFc)!`
+        Wenn Sie Bedenken oder Fragen zu unserer Datenschutzrichtlinie oder unserem Bot haben oder möchten, dass Ihre Daten entfernt werden, können Sie sich direkt an [꧁Saito꧂#6248](https://discord.com/users/848917797501141052) über unseren [Support Server](https://dsc.gg/infinity-support)!`
       )
       .setThumbnail(client.user.avatarURL())
       .setFooter(`Requested by: ${message.author.username}`)

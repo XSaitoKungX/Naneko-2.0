@@ -4,9 +4,22 @@ const antiwordsData = require('../../database/guildData/antiwords')
       GuildID: message.guild.id,
     })
     if (antiwords) {
-      if (message.content.match("bitch") || message.content.match("hoe") || message.content.match("slut") || message.content.match("nigga") || message.content.match("nigg") || message.content.match("dick") || message.content.match("cunt") || message.content.match("shit") || message.content.match("fuck")) {
+      if (
+        message.content.match("bitch") || 
+        message.content.match("hoe") || 
+        message.content.match("slut") || 
+        message.content.match("nigga") || 
+        message.content.match("nigg") || 
+        message.content.match("dick") || 
+        message.content.match("cunt") || 
+        message.content.match("shit") || 
+        message.content.match("fuck") || 
+        message.content.match("fick") || 
+        message.content.match("schwanz")
+      ) 
+      {
         message.delete();
-        message.reply("**No Bad Words Allowed Please Stop!**").then(msg => {
+        message.reply("**solche Wörter sind hier strengend untersagt, bitte hören Sie auf damit!!**").then(msg => {
           let time = '4s'
           setTimeout(function () {
             msg.delete();

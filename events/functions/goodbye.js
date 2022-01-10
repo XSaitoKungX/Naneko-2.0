@@ -25,21 +25,24 @@ module.exports = async (member) => {
 
      let embed = new MessageEmbed()
        .setDescription(`${leavemessage}`)
-       .setColor("GREEN");
+       .setColor("RANDOM");
 
      let channel = data.Bye;
 
      member.guild.channels.cache.get(channel).send({embeds: [embed]});
    } else if (!data2) {
      let embed2 = new MessageEmbed()
-       .setTitle("Goodbye")
+       .setTitle("**NEWS LEAVE: Goodbye!**")
        .setThumbnail(member.user.avatarURL())
        .setDescription(
-         `**${member.user.tag}** just left the server! We hope they return back soon!`
+         `**${member.user.tag}** hat leider den Server verlassen!!\nHabt ihr vielleicht eine Ahnung oder Ideen, wie wir unseren Server 
+         Interessante, Besser gestalten können, damit die Users uns nicht verlassen?? Falls ja, dann hau mal raus. Wir freuen uns immer auf neue Ideen :) 
+         Der Channel dafür werden wir für euch bereit stellen.\n
+         Wir hoffen sehr, dass er/sie uns bald wieder besuchen wird! :pleading_face:`
        )
-       .setFooter(`We now have ${member.guild.memberCount} members!`)
+       .setFooter(`Wir haben jetzt noch ${member.guild.memberCount} Members!`)
        .setThumbnail(member.user.avatarURL())
-       .setColor("GREEN");
+       .setColor("RANDOM");
 
      let byechannel = data.Bye;
 

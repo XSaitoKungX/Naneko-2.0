@@ -9,12 +9,12 @@ module.exports = {
   run: async (client, message, args) => {
     let text = args.join(" ");
     if (!text) {
-      return message.channel.send(`\`Usage: =ascii <msg>\``);
+      return message.channel.send(`\`Usage: n.ascii <msg>\``);
     }
     let maxlen = 20;
     if (text.length > 20) {
       return message.channel.send(
-        `Please put text that has 20 characters or less because the conversion won't be good!`
+        "🚫 | Bitte geben Sie Text mit maximal `20` Zeichen ein, da die Konvertierung nicht so gut ist!"
       );
     }
     // AGAIN, MAKE SURE TO INSTALL FIGLET PACKAGE!

@@ -21,23 +21,23 @@ module.exports = {
       });
     }
     if (!user) {
-      return message.channel.send("you need to specify the user");
+      return message.channel.send("🚫 | Meister!! Sie müssen den Benutzer angeben!!");
     }
     if (user.id === message.owner.id) {
       return message.channel.send(
-        "You can use any Mod Command against the Server Owner"
+        "Sie können jeden Mod-Befehl gegen den Serverbesitzer verwenden!!"
       );
     }
     const time = args[0];
     if (!time) {
       return message.channel.send(
-        "How many are you going to mute that person ()"
+        "Wie lange wollen Sie diese Person stummschalten? ()"
       );
     }
     const reason = args.slice(1).join(" ");
     if (!reason) {
       return message.channel.send(
-        "With what reason are you going to tempmute?:"
+        "Aus welchem ​​Grund werden Sie tempmuten??: "
       );
     }
     const mtembde = new MessageEmbed()
@@ -48,7 +48,7 @@ module.exports = {
       .addField("Moderator:", message.member.displayName)
       .addField("Time", time, true);
     const mtuembde = new MessageEmbed()
-      .setTitle("YOU HAVE BEEN MUTED!!")
+      .setTitle("SIE WURDEN GEMUTET!!")
       .setColor("RANDOM")
       .addField("Reason", reason)
       .addField("Moderator:", message.member.displayName)
@@ -58,7 +58,7 @@ module.exports = {
     user.roles.add(role);
     setTimeout(function () {
       user.roles.remove(role);
-      user.send(`You are now unmuted! We hope you Follow the Rules next time`);
+      user.send(`Sie sind jetzt nicht mehr stummgeschaltet! Wir hoffen, dass Sie sich beim nächsten Mal an die Regeln halten!!`);
     }, ms(time));
   },
 };

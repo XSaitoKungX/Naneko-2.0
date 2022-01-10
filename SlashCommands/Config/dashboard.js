@@ -36,17 +36,17 @@ module.exports = {
                 .addOptions([
                     {
                         label: "Antilink",
-                        description: "Enable or Disable Antilink System!",
+                        description: "Akzeptieren oder Deaktivieren Antilink System!",
                         value: "antilink",
                     },
                     {
                         label: "AutoRole",
-                        description: "Enable or Disable AutoRole System!",
+                        description: "Akzeptieren oder Deaktivieren AutoRole System!",
                         value: "autorole",
                     },
                     {
                         label: "AutoMod",
-                        description: "Enable or Disable AutoMod System!",
+                        description: "Akzeptieren oder Deaktivieren AutoMod System!",
                         value: "automod",
                     },
                     {
@@ -56,7 +56,7 @@ module.exports = {
                     },
                     {
                         label: "Rep System",
-                        description: "Enable or Disable Rep System!",
+                        description: "Akzeptieren oder Deaktivieren Rep System!",
                         value: "rep",
                     }
                 ])

@@ -9,14 +9,14 @@ module.exports = {
 			embed: {
 				title: 'Lie Swatter | Weky Development',
 				color: '#5865F2',
-				footer: 'Reaper Games',
+				footer: 'Naneko Games',
 				timestamp: true
 			},
-			thinkMessage: 'I am thinking',
+			thinkMessage: 'Ich denke nach..',
 			winMessage:
-				'GG, It was a **{{answer}}**. You got it correct in **{{time}}**.',
-			loseMessage: 'Better luck next time! It was a **{{answer}}**.',
-			othersMessage: 'Only <@{{author}}> can use the buttons!',
+				'GG, Es war ein **{{answer}}**. Sie haben es richtig erraten. Und Sie haben in **{{time}}** geschafft. :tada:',
+			loseMessage: 'Viel Glück beim nächsten Mal! Es war ein **{{answer}}**.',
+			othersMessage: 'Nur mein Geliebtes Meister: <@{{author}}> kann die Button verwenden!',
 			buttons: { true: 'Truth', lie: 'Lie' }
 		});
 	}

@@ -10,13 +10,13 @@ module.exports = {
     const user = message.mentions.members.first();
     if (!user)
       return message.channel.send(
-        "Please mention a user you want to take the role from"
+        "🚫 | Bitte erwähnen Sie einen Benutzer, von dem Sie die Rolle übernehmen möchten!"
       );
     const role = message.mentions.roles.first();
-    if (!role) return message.channel.send("Please mention a role");
+    if (!role) return message.channel.send("Bitte erwähnen Sie eine Rolle!!");
     await user.roles.remove(role),
       message.channel.send(
-        `${user}, ${role} role has been taken away from you`
+        `${user}, ${role} Rolle wurde ihnen weggenommen!`
       );
   },
 };

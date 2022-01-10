@@ -15,15 +15,15 @@ module.exports = {
 
     if (!target) {
       return message.channel.send(
-        `**${message.author.username}**, Please mention the person who you want to kick`
+        `**${message.author.username}**, Bitte erwähnen Sie die Person, die Sie kicken möchten!!`
       );
     }
     if (target.id === message.guild.ownerId) {
-      return message.channel.send("You cannot kick the Server Owner");
+      return message.channel.send("🚫 | Sie können der Server-Owner nicht kicken!!");
     }
     if (target.id === message.author.id) {
       return message.channel.send(
-        `**${message.author.username}**, You can not kick yourself`
+        `**${message.author.username}**, Sie können sich selbst nicht kicken!!`
       );
     }
 

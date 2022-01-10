@@ -8,7 +8,7 @@ module.exports = {
   type: "Fun",
   run: async (client, message, args) => {
     if (args.length < 1) {
-      return message.channel.send("Please enter some text to flip");
+      return message.channel.send("🚫 | Bitte geben Sie einen Text zum Umblättern ein!");
     }
     args.reverse();
     var flipped = [];

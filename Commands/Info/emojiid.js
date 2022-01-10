@@ -11,7 +11,7 @@ module.exports = {
     }
     if (!emoji) {
       return message.channel.send(
-        "Couldn't find the Emojis with the provided name. Please make sure the Emoji name is correct"
+        "🚫 | Die Emojis mit dem angegebenen Namen konnten nicht gefunden werden. Bitte vergewissern Sie sich, dass der Emoji-Name korrekt ist"
       );
     }
     new message.channel.send(`\`\`\`${emoji}\`\`\``);

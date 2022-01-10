@@ -9,10 +9,10 @@ module.exports = async(interaction, client) => {
         await interaction.deferUpdate()
 
         return msg.edit((`\`\`\`js
-        {user.mention} - Mentions the User who left/joined the server.
-        {user.name} - The Username of the User who left/joined the server.
-        {server} - The Name of the Server.
-        {membercount} - The member count of the server.
+        {user.mention} - Erwähnt den Benutzer, der den Server verlassen/beigetreten ist.
+        {user.name} - Der Benutzername des Benutzers, der den Server verlassen hat/beigetreten ist.
+        {server} - Der Name des Servers.
+        {membercount} - Die Mitgliederzahl des Servers.
         \`\`\`
         `))
     }

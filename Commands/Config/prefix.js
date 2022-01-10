@@ -11,11 +11,11 @@ module.exports = {
     });
 
     if (!args[0])
-      return message.channel.send("You must provide a **new prefix**!");
+      return message.channel.send("🚫 | Sie müssen ein **Neues Prefix** angeben!");
 
     if (args[0].length > 5)
       return message.channel.send(
-        "Your new prefix must be under `5` characters!"
+        "🚫 | Ihr neues Prefix darf maximal nur aus `5` Zeichen bestehen!"
       );
 
     if (data) {
@@ -23,7 +23,7 @@ module.exports = {
         GuildID: message.guild.id,
       });
 
-      message.channel.send(`The new prefix is now **\`${args[0]}\`**`);
+      message.channel.send(`Ich habe jetzt neues Prefix eingestellt. Das neue Prefix ist: **\`${args[0]}\`**`);
 
       let newData = new prefixModel({
         Prefix: args[0],
@@ -31,7 +31,7 @@ module.exports = {
       });
       newData.save();
     } else if (!data) {
-      message.channel.send(`The new prefix is now **\`${args[0]}\`**`);
+      message.channel.send(`Ich habe jetzt neues Prefix eingestellt. Das neue Prefix ist: **\`${args[0]}\`**`);
 
       let newData = new prefixModel({
         Prefix: args[0],

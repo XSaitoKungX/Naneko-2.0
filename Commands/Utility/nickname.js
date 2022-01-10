@@ -9,20 +9,20 @@ module.exports = {
     let mentionMember = message.mentions.members.first();
     let newNickname = args.slice(1).join(" ");
     if (!mentionMember) {
-      return message.reply("Mention the user you want to change the nickname");
+      return message.reply("erwähnen Sie den Benutzer, dessen Spitznamen Sie ändern möchten.");
     }
     if (!newNickname) {
-      return message.reply("Input the new nickname for the user you mentioned");
+      return message.reply("geben Sie den neuen Spitznamen für den von Ihnen erwähnten Benutzer ein.");
     }
     try {
       mentionMember.setNickname(newNickname);
     } catch (error) {
       message.reply(
-        "Can't change nickname of this user, does he have a higher role? Is the server creator? Have I got the permission to change his nickname?"
+        "kann den Spitznamen dieses Benutzers nicht ändern, hat dieser User vielleicht eine höhere Rolle? Ist er/ sie Server-Ersteller/in? Habe ich die Erlaubnis, seinen/ ihren Spitznamen zu ändern?"
       );
     }
     message.channel.send(
-      `Changed nickname of ${mentionMember} to **${newNickname}**`
+      `Spitzname von ${mentionMember} wurde zu **${newNickname}** geändert.`
     );
   },
 };

@@ -9,18 +9,18 @@ module.exports = {
 			embed: {
 				title: 'Shuffle Guess | Weky Development',
 				color: '#5865F2',
-				footer: 'Reaper Games',
+				footer: 'Naneko Games',
 				timestamp: true
 			},
-			word: ['voice'],
+			word: ['Programmieren'],
 			button: { cancel: 'Cancel', reshuffle: 'Reshuffle' },
 			startMessage:
-				'I shuffled a word it is **`{{word}}`**. You have **{{time}}** to find the correct word!',
+				'Ich habe ein Wort vermischt, es ist **`{{word}}`**. Sie haben **{{time}}** Zeit, um das richtige Wort zu finden!',
 			winMessage:
-				'GG, It was **{{word}}**! You gave the correct answer in **{{time}}.**',
-			loseMessage: 'Better luck next time! The correct answer was **{{answer}}**.',
-			incorrectMessage: "No {{author}}! The word isn't `{{answer}}`",
-			othersMessage: 'Only <@{{author}}> can use the buttons!',
+				'GG, es war **{{word}}**! Sie haben in **{{time}} die richtige Antwort gegeben.** :tada:',
+			loseMessage: 'Viel Glück beim nächsten Mal! Die richtige Antwort war **{{answer}}**.',
+			incorrectMessage: "Nein {{author}}! Das Wort ist nicht `{{answer}}`",
+			othersMessage: 'Nur mein Geliebtes Meister: <@{{author}}> kann die Button verwenden!',
 			time: 60000
 		});
 	}

@@ -11,11 +11,11 @@ module.exports = {
 
     if (isNaN(amount)) {
       return message.channel.send(
-        `${message.author.username}, you can only clear messages from 1-99`
+        `${message.author.username}, Sie können Max. nur 1-99 Nachrichten löschen!!`
       );
     } else if (amount <= 1 || amount > 100) {
       return message.channel.send(
-        `${message.author.username}, you can only clear messages from 1-99`
+        `${message.author.username}, Sie können Max. nur 1-99 Nachrichten löschen!!`
       );
     }
 

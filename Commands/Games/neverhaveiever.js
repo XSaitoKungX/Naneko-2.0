@@ -9,12 +9,12 @@ module.exports = {
 			embed: {
 				title: 'Never Have I Ever | Weky Development',
 				color: '#5865F2',
-				footer: 'Reaper Games',
+				footer: 'Naneko Games',
 				timestamp: true
 			},
-			thinkMessage: 'I am thinking',
-			othersMessage: 'Only <@{{author}}> can use the buttons!',
-			buttons: { optionA: 'Yes', optionB: 'No' }
+			thinkMessage: 'Ich bin am Überlegen..',
+			othersMessage: 'Nur mein Geliebtes Meister: <@{{author}}> kann die Button verwenden!',
+			buttons: { optionA: 'Ja', optionB: 'Nein' }
 		});
 	}
 }

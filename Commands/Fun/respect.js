@@ -7,7 +7,7 @@ module.exports = {
   run: async (client, message, args) => {
     const user = message.mentions.members.first();
     if (!user) {
-      return message.channel.send("You need to mention someone");
+      return message.channel.send("🚫 | Sie müssen jemanden erwähnen!");
     }
     var gif = [
       `https://media.tenor.com/images/0eb1f1ff68936dbde97bebfa4145e6f0/tenor.gif`,

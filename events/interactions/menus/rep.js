@@ -14,7 +14,7 @@ module.exports = async(interaction, client) => {
         })
 
         if (!data) {
-            msg.edit("Please send the **CHANNEL ID** to be setup as Trade Rep Channel")
+            msg.edit("Bitte senden Sie die **CHANNEL ID**, um als Handelsvertreter-Kanal eingerichtet zu werden")
 
             const filter = (m) => m.author.id === interaction.member.id
 
@@ -27,7 +27,7 @@ module.exports = async(interaction, client) => {
 
                 let channel = interaction.guild.channels.cache.get(channelID)
 
-                if (!channel) return msg.edit("Couldn't find that channel!")
+                if (!channel) return msg.edit("Ich konnte diesen Kanal leider nicht finden!")
 
                 let newData = new repData({
                     GuildID: interaction.guild.id,
@@ -38,7 +38,7 @@ module.exports = async(interaction, client) => {
 
                 await collector.stop()
     
-                return msg.edit(`Rep System has been enabled and Trade Rep Channel is set to ${interaction.guild.channels.cache.get(channelID)}`)
+                return msg.edit(`Rep System wurde aktiviert und der Trade Rep Channnel ist auf ${interaction.guild.channels.cache.get(channelID)} eingestellt.`)
             })
 
             collector.on('end', async(collected, returnValue) => {
@@ -50,7 +50,7 @@ module.exports = async(interaction, client) => {
                 GuildID: interaction.guild.id
             })
 
-            return msg.edit(`Rep System Has been stopped!`)
+            return msg.edit(`Rep System wurde gestoppt!`)
         }
     }
 }

@@ -10,7 +10,7 @@ module.exports = {
     if (message.channel.type === "dm") return;
     let text = args.join(" ");
     if (!text) {
-      return message.reply("`Usage: =achievement <txt>`");
+      return message.reply("`Usage: n.achievement <txt>`");
     }
     const link = await client.images.image.achievement({ text: text })
     message.channel.send({

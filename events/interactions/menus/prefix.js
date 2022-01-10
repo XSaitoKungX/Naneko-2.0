@@ -14,7 +14,7 @@ module.exports = async(interaction, client)=> {
         })
 
         if (!data) {
-            msg.edit("Please send the new prefix below!")
+            msg.edit("Bitte senden Sie das neue Präfix unten!")
 
             const filter = (m) => m.author.id === interaction.member.id
 
@@ -24,7 +24,7 @@ module.exports = async(interaction, client)=> {
                 let prefix = collected.content
 
                 if (prefix.length >= 5) {
-                    return msg.edit(`Prefix must be of less than 5 characters!`)
+                    return msg.edit(`Das Präfix muss aus weniger als 5 Zeichen bestehen!`)
                 }
 
                 let newData = new prefixData({
@@ -36,7 +36,7 @@ module.exports = async(interaction, client)=> {
 
                 await collector.stop()
 
-                return msg.edit(`Prefix changed to ${prefix}!`)
+                return msg.edit(`Prefix geändert zu --> ${prefix}!`)
             })
 
             collector.on('end', async(collected, reason)=> {
@@ -44,7 +44,7 @@ module.exports = async(interaction, client)=> {
             })
         } else if (data) {
 
-            await msg.edit('Please send the new prefix below!')
+            await msg.edit('Bitte senden Sie das neue Präfix unten!')
             const newFilter = (m) => m.author.id === interaction.member.id
 
             const newCollector = await interaction.channel.createMessageCollector({ newFilter, time: 60000 })
@@ -53,7 +53,7 @@ module.exports = async(interaction, client)=> {
                 let newPrefix = collected.content
 
                 if (newPrefix.length >= 5) {
-                    return msg.edit(`Prefix must be of less than 5 characters!`)
+                    return msg.edit(`Das Präfix muss aus weniger als 5 Zeichen bestehen!`)
                 }
                 await prefixData.findOneAndRemove({
                     GuildID: interaction.guild.id
@@ -68,7 +68,7 @@ module.exports = async(interaction, client)=> {
 
                 await newCollector.stop()
 
-                return msg.edit(`Prefix changed to ${newPrefix}`)
+                return msg.edit(`Prefix geändert zu --> ${newPrefix}`)
             })
 
             newCollector.on('end', async(collected, reason)=> {

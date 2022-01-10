@@ -22,7 +22,7 @@ module.exports = async (message, client) => {
   // mentioned bot
   if (message.content ===`<@!${client.user.id}>` || message.content === `<@${client.user.id}>`) {
     return message.channel.send(
-      `My prefix in this server is \`${PREFIX}\`\n\nTo get a list of commands, type \`${PREFIX}help\``
+      `Mein Prefix auf diesen Server ist --> \`${PREFIX}\`\n\nUm Command-Liste zu sehen/bekommen, type \`${PREFIX}help\``
     );
   }
 };

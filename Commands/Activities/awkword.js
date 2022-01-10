@@ -6,13 +6,13 @@ module.exports = {
     run: async(client, message, args) => {
 
       if (!message.member.voice.channelId) {
-        return message.channel.send('You need to join a voice channel first!')
+        return message.channel.send('🚫 | Sie müssen zuerst einem Sprachkanal beitreten!')
       }
         client.discordTogether.createTogetherCode(message.member.voice.channelId, 'awkword').then(async(invite) => {
             
             let embed = new MessageEmbed()
             .setTitle("Awkword.io")
-            .setDescription(`[Click Here](${invite.code}) to play Awkword.io!\n\`\`\`\nNote: This feature is not availble for mobile users!\`\`\``)
+            .setDescription(`[Click Here](${invite.code}) um **Awkword.io** zu spielen!\n\`\`\`\nNote: Diese Funktion ist für mobile Benutzer nicht verfügbar!\`\`\``)
             .setColor("GREEN")
             .setFooter(`Requested By: ${message.author.tag}`)
             

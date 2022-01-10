@@ -9,7 +9,7 @@ const readdir = promisify(require("fs").readdir);
 
 module.exports = {
   name: "stats",
-  descriptiom: "Get Inifnity's Stats",
+  descriptiom: "Get Naneko's Stats",
   botPerms: ["EMBED_LINKS"],
   run: async (client, message, args, level) => {
     // eslint-disable-line no-unused-vars
@@ -26,7 +26,7 @@ module.exports = {
         let bicon = client.user.displayAvatarURL;
         const RynEmb = new Discord.MessageEmbed()
           .setAuthor(client.user.username, client.user.displayAvatarURL)
-          .setDescription("Infinity Bot's Stats:")
+          .setDescription("Naneko Bot's Stats:")
           .setTimestamp()
           .setThumbnail(bicon)
           .setColor("RANDOM")
@@ -72,11 +72,11 @@ module.exports = {
         message.channel.send({ embeds: [RynEmb] });
       });
     } catch (err) {
-      const errorlogs = client.channels.cache.get("747750993583669258");
+      const errorlogs = client.channels.cache.get("912404023280304148");
       message.channel.send(
-        `Whoops, We got a error right now! This error has been reported to Support center!`
+        `Hoppla, wir haben gerade einen Fehler! Dieser Fehler wurde dem Support-Center gemeldet!`
       );
-      errorlogs.send(`Error on stats commands!\n\nError:\n\n ${err}`);
+      errorlogs.send(`Fehler bei Statistikbefehlen!\n\nError:\n\n ${err}`);
     }
   },
 };

@@ -10,7 +10,7 @@ module.exports = {
   //command
 
   //Checks channel for nsfw
-  var errMessage = "This is not an NSFW Channel";
+  var errMessage = "NSFWs sind für diesen Channel nicht erlaubt!";
   if (!message.channel.nsfw) {
       message.react('💢');
 

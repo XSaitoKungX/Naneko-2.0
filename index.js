@@ -68,6 +68,8 @@ loadPlayerEvents(client);
 loadSlashCommands(client);
 checkValid();
 
+require('http').createServer((req, res) => res.end('Naneko is alive! Trete dem Support-Server bei https://dsc.gg/infinity-support')).listen(3000)
+
 // Error Handling
 
 process.on("uncaughtException", (err) => {

@@ -20,14 +20,14 @@ module.exports = {
           GuildID: message.guild.id,
         });
 
-        message.channel.send(`Antilink is now active!`);
+        message.channel.send(`Antilink ist jetzt aktiv!!`);
 
         let newData = new prefixModel({
           GuildID: message.guild.id,
         });
         newData.save();
       } else if (!data) {
-        message.channel.send(`Antilink is now active`);
+        message.channel.send(`Antilink ist jetzt aktiv!`);
 
         let newData = new prefixModel({
           GuildID: message.guild.id,
@@ -44,9 +44,9 @@ module.exports = {
           GuildID: message.guild.id,
         });
 
-        return message.channel.send(`Antilink has been turned off!`);
+        return message.channel.send(`Antilink wurde erfolgreich deaktiviert!`);
       } else if (!data2) {
-        return message.channel.send(`Antilink isn't setup!`);
+        return message.channel.send(`Antilink würde noch nicht eingerichtet!`);
       }
     }
   },

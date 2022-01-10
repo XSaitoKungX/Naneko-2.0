@@ -9,12 +9,12 @@ module.exports = {
   run: async (client, message, args) => {
     //Eval Command(Not to be made public btw!)
     if (message.author.id != OWNER_ID) {
-      return message.channel.send("Limited to the bot owner only!");
+      return message.channel.send("🚫 | Dieser Befehl ist nur für der Server-Owner verfügbar!");
     }
     try {
       const code = args.join(" ");
       if (!code) {
-        return message.channel.send("What do you want to evaluate?");
+        return message.channel.send("Was möchten Sie bewerten??");
       }
       let evaled = eval(code);
 

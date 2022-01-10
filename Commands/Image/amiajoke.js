@@ -13,7 +13,7 @@ module.exports = {
       : message.author.avatarURL({ format: "png", dynamic: true, size: 2048 })
 
     if (!avatar) {
-      return message.channel.send("`Usage: =amaiajoke <user>`");
+      return message.channel.send("`Usage: n.amaiajoke <user>`");
     }
     const link = await client.images.image.amiajoke({ image: avatar })
     message.channel.send({ files: [{ attachment: link }] });
