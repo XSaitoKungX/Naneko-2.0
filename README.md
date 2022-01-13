@@ -1,4 +1,4 @@
-> ⚠️ The image manipulation commands using the AlexFlipNote's API are no longer working. Therefore you no longer need to use the `ALEXFLIPNOTE_API_KEY` for your bot.
+> ⚠️ Die Befehle zur Bildbearbeitung, die die API von AlexFlipNote verwenden, funktionieren nicht mehr. Daher müssen Sie den `ALEXFLIPNOTE_API_KEY` für Ihren Bot nicht mehr verwenden.
 
 ![Naneko Logo](https://i.pinimg.com/736x/ce/67/88/ce67883c7962f637be17f6e9e1397661--anime-art-girl-kawaii-anime-girl.jpg)
 
