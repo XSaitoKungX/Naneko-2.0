@@ -195,7 +195,7 @@ function canModifyQueue(interaction) {
   if (!memberChannelId) {
 
     const embed1 = new DJS.MessageEmbed()
-      .setDescription("🚫 | Du musst zuerst einem Sprachkanal beitreten!")
+      .setDescription("You need to join a voice channel first!")
       .setColor("ORANGE");
 
     return interaction.editReply({ ephemeral: true, embeds: [embed1], allowedMentions: { repliedUser: false } }).catch(console.error);
