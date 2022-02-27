@@ -4,7 +4,7 @@ const neko = new nekoclient();
 
 module.exports = {
     name: 'baka',
-    description: "Sende ein zufälliges Bild/GIF"
+    description: "Sende ein zufälliges Bild/GIF",
     run: async (client, message, args) => {
         if (!message.guild) return;
             async function baka() {
