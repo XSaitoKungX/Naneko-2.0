@@ -18,20 +18,20 @@ module.exports = {
 					{
 						type: 2,
 						style: 'SECONDARY',
-						custom_id: 'left',
-						label: 'Left',
+						custom_id: 'links',
+						label: 'Links',
 					},
 					{
 						type: 2,
 						style: 'PRIMARY',
-						custom_id: 'middle',
-						label: 'Middle',
+						custom_id: 'mittel',
+						label: 'Mittel',
 					},
 					{
 						type: 2,
 						style: 'SECONDARY',
-						custom_id: 'right',
-						label: 'Right',
+						custom_id: 'rechts',
+						label: 'Rechts',
 					},
 				],
 			},
@@ -61,11 +61,11 @@ module.exports = {
 
 		if(button.customId !== Object.keys(positions)[randomized]) {
 			gameEnded = true;
-			return button.reply({ content: 'You won!' });
+			return button.reply({ content: 'Glückwunsch, du hast gewonnen! :tada:' });
 		}
 		else {
 			gameEnded = true;
-			return button.reply({ content: 'You lose...' });
+			return button.reply({ content: 'Du hast leider verloren... Versuchen Sie es später nochmal.' });
 		}
 	},
 };

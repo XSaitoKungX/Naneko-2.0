@@ -30,14 +30,14 @@ module.exports = {
         }`
       )
       .addField(
-        "About Naneko-2.0",
-        "Naneko-2.0 is an open-source multi-purpose discord bot with features like moderation, music, logging, welcomer and so much more!\nYou can find the link to the [GitHub Repo Here](https://github.com/XSaitoKungX/Naneko-2.0)"
+        "💎 Über Naneko-2.0",
+        "Naneko-2.0 ist ein Open-Source-Mehrzweck-Discord-Bot mit Funktionen wie Moderation, Musik, Protokollierung, Willkommen und vielem mehr!\nDu findest den Link zum [GitHub Repo hier](https://github.com/XSaitoKungX/Naneko-2.0)"
       )
       .addField(
-        "Some Useful Links",
-        "**Get your own bot!** **[Here](https://github.com/XSaitoKungX/Naneko-2.0)** \n**Need Help? Join our ** **[Support/Development Server](https://dsc.gg/infinity-support)** **for assistance**"
+        "💎 Einige nützliche Links",
+        "**Hole deinen eigenen Bot!** **[Hier](https://github.com/XSaitoKungX/Naneko-2.0)** \n**Benötigst du Hilfe? Dann tritt unserem** **[Support/Development Server](https://dsc.gg/infinity-support)** **für Unterstützung** bei!"
       )
-      .setFooter("Regards, Naneko-2.0 Development Team");
+      .setFooter("Viele Grüße, Naneko-2.0-Entwicklungsteam");
     message.channel.send({ embeds: [embed] });
   },
 };

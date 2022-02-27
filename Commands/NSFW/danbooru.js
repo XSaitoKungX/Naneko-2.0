@@ -14,7 +14,7 @@ module.exports = {
     //command
 
     //Checks channel for nsfw
-    var errMessage = "This is not an NSFW Channel";
+    var errMessage = "🚫 | NSFWs sind für diesen Channel nicht erlaubt!";
     if (!message.channel.nsfw) {
       message.react("💢");
 
@@ -28,7 +28,7 @@ module.exports = {
       message.content.toUpperCase().includes("GORE")
     )
       return message.channel.send(
-        "That kind of stuff is not allowed! Not even in NSFW channels!"
+        "🚫 | So etwas ist nicht erlaubt! Nicht einmal in NSFW-Kanälen!"
       );
 
     var query = message.content.split(/\s+/g).slice(1).join(" ");
@@ -40,7 +40,7 @@ module.exports = {
           const embed = new Discord.MessageEmbed()
             .setTitle("Danbooru:")
             .setImage(image.common.file_url)
-            .setColor("#FF0000")
+            .setColor("RANDOM")
             .setFooter(`Tags: danbooru ${query}`)
             .setURL(image.common.file_url);
           return message.channel.send({ embeds: [embed] });
@@ -48,9 +48,9 @@ module.exports = {
       })
       .catch((err) => {
         if (err.name === "booruError") {
-          return message.channel.send(`No results found for **${query}**!`);
+          return message.channel.send(`⚠ | Keine Ergebnisse gefunden für **${query}**!`);
         } else {
-          return message.channel.send(`No results found for **${query}**!`);
+          return message.channel.send(`⚠ | Keine Ergebnisse gefunden für **${query}**!`);
         }
       });
   },

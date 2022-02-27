@@ -10,7 +10,7 @@ module.exports = {
   run: async (client, message, args) => {
     try {
       //command
-      var errMessage = "This is not an NSFW Channel";
+      var errMessage = "🚫 | NSFWs sind für diesen Channel nicht erlaubt!";
       if (!message.channel.nsfw) {
         message.react("💢");
 
@@ -32,14 +32,14 @@ module.exports = {
         })
         .catch(console.error);
     } catch (err) {
-      const errorlogs = client.channels.cache.get("747423875956080801");
+      const errorlogs = client.channels.cache.get("912404023280304148");
 
       message.channel.send(
-        `Whoops, We got a error right now! This error has been reported to Support center!`
+        `⚠ | Hoppla, wir haben gerade einen Fehler! Dieser Fehler wurde dem Support Center gemeldet!`
       );
 
       errorlogs.send(
-        `Error in ${message.guild.name}  by ${message.author.username} on  4k commands!\n\nError:\n\n ${err}`
+        `Error in ${message.guild.name} by ${message.author.username} on 4k commands!\n\nError:\n\n ${err}`
       );
     }
   },

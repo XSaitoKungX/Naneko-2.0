@@ -13,8 +13,8 @@ module.exports = {
       },
     ]);
     const embed = new Discord.MessageEmbed()
-      .setTitle("Channel Updates")
-      .setDescription(`🔓 ${message.channel}  has been Unlocked`)
+      .setTitle("**Channel Updates**")
+      .setDescription(`🔓 ${message.channel} wurde freigeschaltet!!`)
       .setColor("RANDOM");
     await message.channel.send({ embeds: [embed] });
     message.delete();

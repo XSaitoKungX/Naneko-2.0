@@ -10,7 +10,7 @@ module.exports = {
   run: async (client, message, args) => {
     try {
       //command
-      var errMessage = "This is not an NSFW Channel";
+      var errMessage = "🚫 | NSFWs sind für diesen Channel nicht erlaubt!";
       if (!message.channel.nsfw) {
         message.react("💢");
 
@@ -18,28 +18,25 @@ module.exports = {
           setTimeout(() => msg.delete(), 3000);
         });
       }
-      got("https://www.reddit.com/r/pussy/random.json")
-        .then((response) => {
-          let content = JSON.parse(response.body);
-          var title = content[0].data.children[0].data.title;
-          var amazeme = content[0].data.children[0].data.url;
-          let wow = new discord.MessageEmbed()
-            .setDescription(`**` + title + `**`)
-            .setImage(amazeme)
-            .setFooter(`Where is My Pussy Cat?`)
-            .setColor("RANDOM");
-          message.channel.send({ embeds: [wow] });
-        })
-        .catch(console.error);
+      if (!message.guild) return;
+          async function pussy() {
+          const GIF = await neko.nsfw.pussy();
+          const embed = new Discord.MessageEmbed()
+          .setColor('RANDOM')
+          .setTitle(`**${message.author.username}**, hier ist ein zufälliges Pussy-Bild/GIF`)
+          .setImage(GIF.url)
+          message.channel.send({ embeds: [embed] })
+          .catch(console.error)}
+          pussy();
     } catch (err) {
-      const errorlogs = client.channels.cache.get("747423875956080801");
+      const errorlogs = client.channels.cache.get("912404023280304148");
 
       message.channel.send(
-        `Whoops, We got a error right now! This error has been reported to Support center!`
+        `⚠ | Hoppla, wir haben gerade einen Fehler! Dieser Fehler wurde dem Support Center gemeldet!`
       );
 
       errorlogs.send(
-        `Error in ${message.guild.name}  by ${message.author.username} on  pussy commands!\n\nError:\n\n ${err}`
+        `Error in ${message.guild.name} by ${message.author.username} on pussy commands!\n\nError:\n\n ${err}`
       );
     }
   },

@@ -12,11 +12,11 @@ module.exports = {
 				footer: 'Naneko Games',
 				timestamp: true
 			},
-			thinkMessage: 'I am thinking',
+			thinkMessage: 'Ich denke nach..',
 			winMessage:
-				'GG, It was a **{{answer}}**. You got it correct in **{{time}}**.',
-			loseMessage: 'Better luck next time! It was a **{{answer}}**.',
-			othersMessage: 'Only <@{{author}}> can use the buttons!',
+				'GG, Es war ein **{{answer}}**. Du hast es richtig erraten. Und du hast in **{{time}}** geschafft. :tada:',
+			loseMessage: 'Viel Glück beim nächsten Mal! Es war ein **{{answer}}**.',
+			othersMessage: `Nur der- oder diejenige, der mich gecodet hat, kann die Button benutzen, **{{author}}**!`,
 			buttons: { true: 'Truth', lie: 'Lie' }
 		});
 	}

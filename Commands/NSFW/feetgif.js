@@ -10,7 +10,7 @@ module.exports = {
   //command
 
   //Checks channel for nsfw
-  var errMessage = "This is not an NSFW Channel";
+  var errMessage = "🚫 | NSFWs sind für diesen Channel nicht erlaubt!";
   if (!message.channel.nsfw) {
       message.react('💢');
 
@@ -21,18 +21,17 @@ module.exports = {
 
   }
 
-        async function work() {
-        let owo = (await neko.nsfw.feetGif());
+  if (!message.guild) return;
+  async function feetgif() {
+      const GIF = await neko.nsfw.feetGif();
+      const embed = new Discord.MessageEmbed()
+      .setColor('RANDOM')
+      .setTitle(`**${message.author.username}**, hier ist ein zufälliges Fuß-Gif`)
+      .setImage(GIF.url)
+      message.channel.send({ embeds: [embed] });
+  }
 
-        const cumslut = new Discord.MessageEmbed()
-        .setTitle("feetGif")
-        .setImage(owo.url)
-        .setColor(`#FF0000`)
-        .setURL(owo.url);
-        message.channel.send({ embeds: [cumslut] });
+      feetgif();
 
 }
-
-      work();
-}
-                };
+};

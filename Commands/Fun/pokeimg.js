@@ -7,11 +7,11 @@ module.exports = {
   run: async (client, message, args) => {
     const state = "enabled";
     if (state === "disabled") {
-      return message.channel.send("The command has been disabled for now!");
+      return message.channel.send("Der Befehl wurde vorerst deaktiviert!");
     }
     const name = args.join(" ");
     if (!name) {
-      return message.channel.send("Please type the Pokemon Name");
+      return message.channel.send("🚫 | Bitte gib den Pokemon-Namen ein!");
     }
     const link = `https://i.some-random-api.ml/pokemon/${name}.png`;
     const embed = new Discord.MessageEmbed()

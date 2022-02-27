@@ -9,12 +9,12 @@ module.exports = {
     const role = message.mentions.roles.first();
    
     if (!role) {
-      return message.channel.send("`Usage: =delrole <role>`");
+      return message.channel.send("`Usage: n.delrole <role>`");
     }
     role.delete();
     const embed = new Discord.MessageEmbed()
-      .setTitle("Roles Update")
-      .setDescription(`${role} role has been deleted`)
+      .setTitle("**Roles Update**")
+      .setDescription(`${role} Rolle wurde gelöscht!`)
       .setColor("RANDOM");
     await message.channel.send({ embeds: [embed] });
   },

@@ -8,9 +8,9 @@ module.exports = {
     run: async (client, message, args) => {
         const splitArgs = args.join(" ").split("/")
         const text1 = splitArgs[0]
-        if (!text1) return message.channel.send("Provide proper arguments! Note: Use '/' to split the text")
+        if (!text1) return message.channel.send("Argumentiere richtig! Hinweis: Verwende '/', um den Text zu teilen")
         const text2 = splitArgs[1]
-        if (!text2) return message.channel.send("Provide proper arguments! Note: Use '/' to split the text")
+        if (!text2) return message.channel.send("Argumentiere richtig! Hinweis: Verwende '/', um den Text zu teilen")
         message.channel.send({ files: [{ attachment: `https://api.memegen.link/images/feelsgood/${text1}/${text2}`, name: "meme.png" }] });
     }
 }

@@ -1,5 +1,7 @@
 const discord = require("discord.js");
 const got = require("got"); //MAKE SURE TO INSTALL THE PACKAGE "GOT" ELSE THE CODE WOULD NOT WORK
+const nekoclient = require('nekos.life');
+const neko = new nekoclient();
 
 module.exports = {
   name: "hentai",
@@ -10,7 +12,7 @@ module.exports = {
   run: async (client, message, args) => {
     //command
     try {
-      var errMessage = "This is not an NSFW Channel";
+      var errMessage = "🚫 | NSFWs sind für diesen Channel nicht erlaubt!";
       if (!message.channel.nsfw) {
         message.react("💢");
 
@@ -18,28 +20,25 @@ module.exports = {
           setTimeout(() => msg.delete(), 3000);
         });
       }
-      got("https://www.reddit.com/r/hentai/random.json")
-        .then((response) => {
-          let content = JSON.parse(response.body);
-          var title = content[0].data.children[0].data.title;
-          var amazeme = content[0].data.children[0].data.url;
-          let wow = new discord.MessageEmbed()
-            .setDescription(`**` + title + `**`)
-            .setImage(amazeme)
-            .setFooter(`Credits to r/hentai`)
-            .setColor("RANDOM");
-          message.channel.send({ embeds: [wow] });
-        })
-        .catch(console.error);
+      if (!message.guild) return;
+            async function hentai() {
+            const GIF = await neko.nsfw.hentai();
+            const embed = new Discord.MessageEmbed()
+            .setColor('RANDOM')
+            .setTitle(`**${message.author.username}**, hier ist ein zufälliges Hentai-Bild`)
+            .setImage(GIF.url)
+            message.channel.send(embed)
+        .catch(console.error)}
+        hentai();
     } catch (err) {
-      const errorlogs = client.channels.cache.get("747423875956080801");
+      const errorlogs = client.channels.cache.get("912404023280304148");
 
       message.channel.send(
-        `Whoops, We got a error right now! This error has been reported to Support center!`
+        `⚠ | Hoppla, wir haben gerade einen Fehler! Dieser Fehler wurde dem Support Center gemeldet!`
       );
 
       errorlogs.send(
-        `Error in ${message.guild.name}  by ${message.author.username} on  hentai commands!\n\nError:\n\n ${err}`
+        `Error in ${message.guild.name} by ${message.author.username} on hentai commands!\n\nError:\n\n ${err}`
       );
     }
   },

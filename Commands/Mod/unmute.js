@@ -16,8 +16,7 @@ module.exports = {
         const role = message.guild.roles.cache.find(role => role.name === 'Muted')
 
         target.roles.remove(role.id);
-        message.reply('Unmuted!')
-
+        message.reply('du wurdest du jetzt entmutet! Achte immer auf die Spielregeln des Servers!')
 
     }
 }

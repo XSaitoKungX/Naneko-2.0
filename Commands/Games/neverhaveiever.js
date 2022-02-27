@@ -12,9 +12,9 @@ module.exports = {
 				footer: 'Naneko Games',
 				timestamp: true
 			},
-			thinkMessage: 'I am thinking',
-			othersMessage: 'Only <@{{author}}> can use the buttons!',
-			buttons: { optionA: 'Yes', optionB: 'No' }
+			thinkMessage: 'Ich bin am Überlegen..',
+			othersMessage: `Nur der- oder diejenige, der mich gecodet hat, kann die Button benutzen, **{{author}}**!`,
+			buttons: { optionA: 'Ja', optionB: 'Nein' }
 		});
 	}
 }

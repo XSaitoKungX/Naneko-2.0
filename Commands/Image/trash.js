@@ -8,7 +8,7 @@ module.exports = {
   run: async (client, message, args) => {
    const mention = message.mentions.members.first();
         if (!mention) {
-            return message.channel.send("🚫 | Sie müssen jemanden erwähnen!");
+            return message.channel.send("🚫 | Du musst jemanden erwähnen!");
         }
         const user1 = message.author;
         const avatar1 = user1.displayAvatarURL({size: 512, format: "png"});

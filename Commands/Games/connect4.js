@@ -16,13 +16,13 @@ module.exports = {
           player1: '🔵',
           player2: '🟡'
         },
-        turnMessage: '{emoji} | Its now **{player}** turn!',
-        winMessage: '{emoji} | **{winner}** won the game!',
-        gameEndMessage: 'The game went unfinished :(',
-        drawMessage: 'It was a draw!',
-        askMessage: 'Hey {opponent}, {challenger} challenged you for a game of Connect 4!',
-        cancelMessage: 'Looks like they refused to have a game of Connect4. \:(',
-        timeEndMessage: 'Since the opponent didnt answer, i dropped the game!',
+        turnMessage: '{emoji} | Jetzt ist **{player}** an der Reihe!',
+        winMessage: '{emoji} | **{winner}** hat das Spiel gewonnen!',
+        gameEndMessage: 'Das Spiel blieb unvollendet :(',
+        drawMessage: 'Es war ein Unentschieden!',
+        askMessage: 'Hey {opponent}, {challenger} hat dich zu einer Partie Connect 4 herausgefordert!',
+        cancelMessage: 'Sieht so aus, als hättest du dich geweigert, Connect4 zu spielen. \:(',
+        timeEndMessage: 'Da der Gegner nicht geantwortet hat, habe ich das Spiel abgebrochen!',
       }).startGame();
   },
 };

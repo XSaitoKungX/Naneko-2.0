@@ -10,9 +10,9 @@ module.exports = {
   run: async (client, message, args) => {
     let splitText = args.join(" ").slipt("/")
     let text = splitText[0]
-    if (!text) return message.channel.send("Proper Usage: n.phb text/text")
+    if (!text) return message.channel.send("Richtige Verwendung: n.phb text/text")
     let text2 = splitText[1]
-    if (!text2) return message.channel.send("Proper Usage: n.phb text/text")
+    if (!text2) return message.channel.send("Richtige Verwendung: n.phb text/text")
     const link = await client.images.image.pornhub({ text1: text, text2: text2 })
     message.channel.send({
       files: [

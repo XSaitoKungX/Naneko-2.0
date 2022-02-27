@@ -7,15 +7,15 @@ module.exports = {
   run: async (client, message, args) => {
         const txt = args.slice(1).join(" ")
         const lang = args[0]
-        if(!lang) return message.channel.send("Provide the ISO code of the language.")
-        if(!txt) return message.channel.send("Provide a text to translate.")
+        if(!lang) return message.channel.send("Gib den ISO-Code der Sprache an.")
+        if(!txt) return message.channel.send("Gib einen zu übersetzenden Text an.")
         translate(txt, { to: lang }).then(res => {
           const embed = new discord.MessageEmbed()
           .setDescription(res.text)
           .setColor("RANDOM")
           message.channel.send({ embeds: [embed] });
     }).catch(err => {
-      message.channel.send("Please provide a valid ISO language code.")
+      message.channel.send("Bitte gib einen gültigen ISO-Sprachcode an.")
     });
   },
 };

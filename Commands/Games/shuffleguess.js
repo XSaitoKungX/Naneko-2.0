@@ -12,15 +12,15 @@ module.exports = {
 				footer: 'Naneko Games',
 				timestamp: true
 			},
-			word: ['voice'],
+			word: ['Programmieren'],
 			button: { cancel: 'Cancel', reshuffle: 'Reshuffle' },
 			startMessage:
-				'I shuffled a word it is **`{{word}}`**. You have **{{time}}** to find the correct word!',
+				'Ich habe ein Wort vermischt, es ist **`{{word}}`**. Du hast **{{time}}** Zeit, um das richtige Wort zu finden!',
 			winMessage:
-				'GG, It was **{{word}}**! You gave the correct answer in **{{time}}.**',
-			loseMessage: 'Better luck next time! The correct answer was **{{answer}}**.',
-			incorrectMessage: "No {{author}}! The word isn't `{{answer}}`",
-			othersMessage: 'Only <@{{author}}> can use the buttons!',
+				'GG, es war **{{word}}**! Du hast in **{{time}} die richtige Antwort gegeben.** :tada:',
+			loseMessage: 'Viel Glück beim nächsten Mal! Die richtige Antwort war **{{answer}}**.',
+			incorrectMessage: "Nein {{author}}! Das Wort ist nicht `{{answer}}`",
+			othersMessage: 'Nur der- oder diejenige, der mich gecodet hat, kann die Button benutzen, **{{author}}**!',
 			time: 60000
 		});
 	}

@@ -7,7 +7,7 @@ module.exports = {
   run: async (client, message, args) => {
     let msg = args.join(" ");
     if (!msg) {
-      return message.channel.send("Enter some text");
+      return message.channel.send("🚫 | Bitte sag etwas!!");
     }
     const embed = new Discord.MessageEmbed()
       .setDescription(`${msg}`)

@@ -6,14 +6,14 @@ module.exports = {
   description: "Find meanings from the urban dictionary",
   botPerms: ["EMBED_LINKS"],
   run: async (client, message, args) => {
-    if (!message.channel.nsfw) {
-      return message.channel.send(
-        "🚫 | Dieser Befehl kann nur in einem NSFW-Kanal verwendet werden!"
-      );
-    }
+    // if (!message.channel.nsfw) {
+    //   return message.channel.send(
+    //     "🚫 | Dieser Befehl kann nur in einem NSFW-Kanal verwendet werden!"
+    //   );
+    // }
     let str = args.join("");
     if (!str) {
-      return message.channel.send("🚫 | Bitte geben Sie ein Wort ein!!");
+      return message.channel.send("🚫 | Bitte gib ein Wort ein!!");
     }
     if (args.length > 0) {
       urban(str).first((json) => {

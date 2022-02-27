@@ -7,7 +7,7 @@ module.exports = {
   botPerms: ["ATTACH_FILES"],
   run: async (client, message, args) => {
     try {
-      var errMessage = "This is not an NSFW Channel";
+      var errMessage = "🚫 | NSFWs sind für diesen Channel nicht erlaubt!";
       if (!message.channel.nsfw) {
         message.react("💢");
 

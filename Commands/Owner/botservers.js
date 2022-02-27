@@ -11,7 +11,7 @@ module.exports = {
     try {
       if (message.author.id != OWNER_ID)
         return message.channel.send(
-          `<a:_cross:725303285015117844> Developer Only <a:_cross:725303285015117844>`
+          `👑 Developer Only 👑`
         );
       let data = [];
       client.guilds.cache.forEach((x) => {
@@ -24,16 +24,16 @@ module.exports = {
         data.sort();
         data = `🔹 ` + data.join("\n🔹");
       } else {
-        data = "[No server found]";
+        data = "[Kein Server gefunden]";
       }
     } catch (err) {
       const errorlogs = client.channels.cache.get(ERROR_LOGS_CHANNEL);
 
       message.channel.send(
-        `Whoops, We got a error right now! This error has been reported to Support center!`
+        `Hoppla, wir haben gerade einen Fehler! Dieser Fehler wurde dem Support-Center gemeldet!`
       );
 
-      errorlogs.send(`Error on bs commands!\n\nError:\n\n ${err}`);
+      errorlogs.send(`Fehler bei BS-Befehlen!\n\nError:\n\n ${err}`);
     }
   },
 };

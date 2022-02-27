@@ -7,15 +7,15 @@ module.exports = {
   run: async (client, message, args) => {
     const pll = args.join(" ");
     if (!message.member.hasPermission("MANAGE_SERVER")) {
-      return message.channel.send("You don't have enough Permissions");
+      return message.channel.send("🚫 | Du hast nicht genügend Berechtigungen!!");
     }
     if (!pll) {
-      return message.channel.send("Enter some text for the Poll");
+      return message.channel.send("🚫 | Gib einen Text für die Umfrage ein!");
     }
     let embed = new Discord.MessageEmbed()
-      .setTitle("Poll Time")
+      .setTitle("**Poll Time**")
       .setDescription(`${pll}`)
-      .setFooter(`Started by ${message.author.username}`)
+      .setFooter(`Gestartet von: ${message.author.username}`)
       .setColor("RANDOM");
     message.channel
       .send({ embeds: [embed] })

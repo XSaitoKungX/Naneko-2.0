@@ -4,7 +4,7 @@ module.exports = {
   botPerms: ["MANAGE_MESSAGES"],
   run: async (client, message, args) => {
     if (!args.join(" ")) {
-      message.channel.send("Please add some text for me to repeat");
+      message.channel.send("🚫 | Bitte füge etwas Text hinzu, damit ich es wiederholen kann!!");
     }
     message.channel.send(args.join(" "), {
       allowedMentions: { parse: ["users"] },

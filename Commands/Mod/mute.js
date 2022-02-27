@@ -17,16 +17,16 @@ module.exports = {
         const reason = args.slice(2).join(' ');
         const role = message.guild.roles.cache.find(role => role.name === 'Muted')
 
-        if (!member) return message.reply('Mention a user!');
-        if (!time) return message.reply('Tell the time!');
-        if (!reason) return message.reply('Tell me a reason');
+        if (!member) return message.reply('du musst jemanden erwähnen!!');
+        if (!time) return message.reply('wie lange soll der User gemutet werden??');
+        if (!reason) return message.reply('bitte gib einen Geund zum Muten an!');
 
-        if (member.id === message.author.id) return message.reply('You cant mute your self!')
-        if (member.id === client.id) return message.reply('You cant mute me!')
+        if (member.id === message.author.id) return message.reply('du kannst dich selbst nicht muten!')
+        if (member.id === client.id) return message.reply('du kannst mich doch nicht muten!! :pleading_face:')
 
         if (!role) {
             try {
-                message.channel.send('No muted role.. making one..!')
+                message.channel.send('⚠ | Keine Muted-Rolle gefunden.. Die Rolle wird erstellt..')
                 let muterole = await message.guild.roles.create({
                     data: {
                         name: 'Muted',
@@ -41,7 +41,7 @@ module.exports = {
                 });
                 message.channel.send(
                     new MessageEmbed()
-                    .setDescription('Muted role has sucessfully been created')
+                    .setDescription('✅ | **Muted-Rolle** wurde erfolgreich erstellt.')
                     .setColor("GREEN")
                 )
             } catch (error) {
@@ -49,20 +49,18 @@ module.exports = {
             }
         };
         let role2 = message.guild.roles.cache.find(role => role.name === 'Muted')
-        if (member.roles.cache.has(role2)) return message.reply('User is already muted! ')
+        if (member.roles.cache.has(role2)) return message.reply('dieser User wurde bereits gemutet!!')
 
-        if (member.roles.highest.position >= message.member.roles.highest.position) return message.reply('You cant mute this user')
+        if (member.roles.highest.position >= message.member.roles.highest.position) return message.reply('du kannst dieser User nicht muten!!')
 
 
         await member.roles.add(role2)
-        message.channel.send(`${member.user.username} has been muted for ${ms(ms(time))}, Reason: ${reason}`)
+        message.channel.send(`${member.user.username} wurde für ${ms(ms(time))} gemutet, Grund: ${reason}`)
 
         setTimeout(() => {
             member.roles.remove(role2)
         }, ms(time))
 
     }
-
-
 
 }

@@ -4,11 +4,11 @@ module.exports = {
   description: "Shut's down the bot",
   run: async (client, message, args) => {
     if (!OWNER_ID)
-      return message.channel.send("This command is developer Only");
+      return message.channel.send("🚫 | Dieser Command ist nur für Developer zugängig!!");
 
-    message.channel.send("Shutting down...").then((m) => {
+    message.channel.send("Wird heruntergefahren...").then((m) => {
       client.destroy();
     });
-    await message.channel.send("The Bot has been ShutDown");
+    await message.channel.send("Der Bot wurde erfolgreich heruntergefahren.");
   },
 };

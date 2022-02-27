@@ -13,9 +13,9 @@ module.exports = {
           `${message.author.username} Cooldown..`,
           message.author.displayAvatarURL
         )
-        .setDescription(`You need to wait 10 seconds!`)
+        .setDescription(`⚠ | Du musst 10 Sekunden warten!`)
         .setColor(`RED`)
-        .setFooter(`This message will be deleted in 10 seconds..`);
+        .setFooter(`⚠ | Diese Nachricht wird in 10 Sekunden gelöscht..`);
       return message.channel.send(cooldownemb).then((message) => {
         setTimeout(() => message.delete(), 10000);
       });
@@ -35,11 +35,11 @@ module.exports = {
       `.gif`;
     if (!args1) {
       return message.reply(
-        "You need to provide some text for making it illegal"
+        "du musst einen Text angeben, um es illegal zu machen"
       );
     }
     if (meow.length > 1) {
-      return message.reply("Only one thing can be made illegal at a time");
+      return message.reply("es kann immer nur eine Sache illegal gemacht werden");
     }
     const emb = new Discord.MessageEmbed();
     emb.setAuthor(

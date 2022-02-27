@@ -12,18 +12,18 @@ module.exports = {
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
     if (!banMember)
-      return message.channel.send("Please provide a user to ban!");
+      return message.channel.send("🚫 | Bitte gib einen Benutzer zum Bannen an!");
     if (banMember.id === message.guild.owner.id)
-      return message.channel.send("You cannot SoftBan the Server Owner");
+      return message.channel.send("🚫 | Du kannst der Server-Owner nicht bannen!");
 
     let reason = args.slice(1).join(" ");
-    if (!reason) reason = "No reason given!";
+    if (!reason) reason = "Grund nicht angegeben!";
 
     banMember
       .send({
         embed: {
           color: "#ff0019",
-          description: `Hello, you have been banned from ${message.guild.name} for violating Server Rules`,
+          description: `Hallo, du wurdest von ${message.guild.name} gebannt, weil du gegen die Serverregeln verstößt hast!`,
         },
       })
       .then(() =>

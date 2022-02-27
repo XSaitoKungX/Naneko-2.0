@@ -9,16 +9,16 @@ module.exports = {
     const memetemplate = args[0];
     if (!memetemplate) {
       return message.channel.send(
-        "You didn't mention the template!. To see the available meme templates, type `=memetemplates`"
+        "🚫 | Du hast die Vorlage nicht erwähnt! Um die verfügbaren Meme-Vorlagen anzuzeigen, gib `n.memetemplates` ein"
       );
     }
     const memetext1 = args[1];
     if (!memetext1) {
-      return message.channel.send("Enter the text to be placed at the top!");
+      return message.channel.send("🚫 | Gib den Text ein, der oben platziert werden soll!");
     }
     const memetext2 = args[2];
     if (!memetext2) {
-      return message.channel.send("Enter the text to be placed at the bottom!");
+      return message.channel.send("🚫 | Gib den zu platzierenden Text unten ein!");
     }
     message.channel.send({
       files: [
@@ -30,9 +30,9 @@ module.exports = {
     });
   },
   catch(error) {
-    const errorlogs = client.channels.cache.get("747750993583669258");
+    const errorlogs = client.channels.cache.get("912404023280304148");
     message.channel.send(
-      "Seems like an error has occured!. Please try again in a few hours!"
+      "⚠ | Scheint ein Fehler aufgetreten zu sein!. Bitte versuche es in ein paar Stunden erneut!"
     );
     errorlogs.send("Error on Creatememe command! \n\nError:\n\n" + error);
   },

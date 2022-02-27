@@ -7,11 +7,11 @@ module.exports = {
     const name = args.join(" ");
     const emoji = message.guild.emojis.cache.find((r) => r.name === name);
     if (!name) {
-      return message.channel.send("Please type the emoji name");
+      return message.channel.send("🚫 | Bitte gib den Emoji-Namen ein");
     }
     if (!emoji) {
       return message.channel.send(
-        "Couldn't find the Emojis with the provided name. Please make sure the Emoji name is correct"
+        "🚫 | Die Emojis mit dem angegebenen Namen konnten nicht gefunden werden. Bitte stelle sicher, dass der Emoji-Name korrekt ist!"
       );
     }
     new message.channel.send(`\`\`\`${emoji}\`\`\``);

@@ -9,20 +9,20 @@ usage: "[command | Anime]",
 run: async (client, message, args) => {
         const search = `${args}`;
         if(!search)
-        return message.reply('Please add a search query if invalid command will not work.');
+        return message.reply('bitte füge eine Suchanfrage hinzu, wenn ein ungültiger Befehl nicht funktioniert.');
 
         malScraper.getInfoFromName(search)
           .then((data) => {
           const malEmbed = new Discord.MessageEmbed()
             .setAuthor(`My Anime List search result for ${args}`.split(',').join(' '))
             .setThumbnail(data.picture)
-            .setColor('#ffc1cc') //I personally use bubblegum pink!
-            .addField('English Title', data.englishTitle, true)
-            .addField('Japanese Title', data.japaneseTitle, true)
+            .setColor('RANDOM') //I personally use bubblegum pink!
+            .addField('Englischer Titel', data.englishTitle, true)
+            .addField('Japanischer Titel', data.japaneseTitle, true)
             .addField('Type', data.type, true)
-            .addField('Episodes', data.episodes, true)
-            .addField('Rating', data.rating, true)
-            .addField('Aired', data.aired, true)
+            .addField('Episoden', data.episodes, true)
+            .addField('Bewertung', data.rating, true)
+            .addField('Ausgestrahlt', data.aired, true)
             .addField('Score', data.score, true)
             .addField('Score Stats', data.scoreStats, true)
             .addField('Link', data.url);

@@ -21,7 +21,7 @@ module.exports = {
           down: '⬇️',
           left: '⬅️',
         },
-        othersMessage: 'You are not allowed to use buttons for this message!',
+        othersMessage: '🚫 | Du darfst keine Button für diese Nachricht verwenden!',
       }).startGame();
   },
 };

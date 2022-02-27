@@ -16,10 +16,10 @@ module.exports = {
       if (!args[0]) {
       
       let Embed89 = new MessageEmbed()
-      .setDescription('your msg')
+      .setDescription('Deine Nachricht bitte!')
       .setTitle("**Syntax Helper - Command**")
-      .setColor("#FBD570")
-      .setFooter('your footer msg')
+      .setColor("RANDOM")
+      .setFooter('Deine Fußzeilen-Nachricht bitte!')
       return message.channel.send({ embeds: [Embed89] })}
 
       
@@ -30,37 +30,30 @@ module.exports = {
       
       
     if (!user) {let Embed172 = new MessageEmbed()
-        .setDescription("Please mention a **Valid** user.")
+        .setDescription("Bitte gib einen **gültigen** Benutzer an.")
         .setTitle("**Error - Impossible Action**")
-        .setColor("#FF073A")
-        .setFooter('Prefix: !')
+        .setColor("RANDOM")
+        .setFooter('Prefix: n.')
         return message.channel.send({ embeds: [Embed172] })}
 
         
     
 
     if (!text){let Embed172 = new MessageEmbed()
-        .setDescription("Please enter a **Message**.")
+        .setDescription("Bitte gib eine **Nachricht** ein.")
         .setTitle("**Error - Impossible Action**")
-        .setColor("#FBD570")
-        .setFooter('your footer msg')
+        .setColor("RADNOM")
+        .setFooter('Deine Fußzeilen-Nachricht bitte!')
         return message.channel.send({ embeds: [Embed172] })}
 
        
-      
-   
-   
-     
-    
       let embed = new MessageEmbed()
-      .setTitle("**Dear User**")
+      .setTitle("**Lieber User**")
       .setDescription(`${text}`)
-      .setColor("#FBD570")
+      .setColor("RANDOM")
       .setFooter('Direct Message')
       user.send({ embeds: [embed] })
     
-
   },
 
-  
 };
