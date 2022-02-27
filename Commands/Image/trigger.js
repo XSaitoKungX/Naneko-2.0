@@ -7,7 +7,7 @@ module.exports = {
   run: async (client, message, args) => {
     const user = message.mentions.members.first();
     if (!user) {
-      return message.channel.send("Triggered? Who?");
+      return message.channel.send("Wasted? Who?");
     }
     const avatar = user.user.displayAvatarURL({ size: 2048, format: "png" });
 
@@ -15,7 +15,7 @@ module.exports = {
       files: [
         {
           attachment: `https://some-random-api.ml/canvas/triggered?avatar=${avatar}`,
-          name: "file.gif",
+          name: "file.jpg",
         },
       ],
     });

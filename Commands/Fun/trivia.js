@@ -1,19 +1,19 @@
 const { MessageEmbed } = require("discord.js");
 let questions = [
   {
-    title: "Beste Programmiersprache Ever!",
+    title: "Best programming language",
     options: ["JavaScript/TypeScript", "Python", "Ruby", "Rust"],
     correct: 1,
   },
 
   {
-    title: "Bestes NPM-Pakage Ever!",
+    title: "Best NPM package",
     options: ["int.engine", "ms", "ws", "discord.js"],
     correct: 4,
   },
 
   {
-    title: "Welcher Befehl ist besser?",
+    title: "Which command is better",
     options: ["8ball", "emoify", "ascii", "flipword"],
     correct: 2,
   },
@@ -37,7 +37,7 @@ module.exports = {
       )
       .setColor(`GREEN`)
       .setFooter(
-        `Beantworten Sie diese Nachricht mit der richtigen Fragenummer! Sie haben 15 Sekunden Zeit.`
+        `Reply to this message with the correct question number! You have 15 seconds.`
       );
     message.channel.send({ embeds: [Embed] });
     try {
@@ -46,12 +46,12 @@ module.exports = {
         { time: 15000, max: 1, errors: ["time"] }
       );
       if (parseInt(msgs.first().content) == q.correct) {
-        return message.channel.send(`✅ | WOW, Glükwunsch!! Sie haben die richtige Antwort gegeben!! Wenn es keinen Grund zum Feiern ist.. :tada: :partying_face:`);
+        return message.channel.send(`You got it correct!`);
       } else {
-        return message.channel.send(`:x: | Es tut mir leid, aber das war leider falsch! :pleading_face: Aber Kopf hoch! Sie können es später nochmal probieren :)`);
+        return message.channel.send(`You got it incorrect.`);
       }
     } catch (e) {
-      return message.channel.send(`🚫 | Sie haben mir leider keine Antwort darauf gegeben! Sie können gern später nochmal versuchen, vielleicht haben Sie dann ja Glück :)`);
+      return message.channel.send(`You did not answer!`);
     }
   },
 };

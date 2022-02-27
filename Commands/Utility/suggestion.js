@@ -8,31 +8,31 @@ module.exports = {
     const msg = args.join(" ");
     message.delete();
     if (!msg) {
-      return message.channel.send("🚫 | Bitte fügen Sie bitte einen Vorschlag hinzu!!");
+      return message.channel.send("Add a suggestion please");
     }
     const suggestionchannel = message.guild.channels.cache.find(
       (c) => c.name === "suggestions"
     );
     if (!suggestionchannel) {
       return message.channel.send(
-        'Dieser Server hat keinen Kanal namens "suggestions", wenn der Kanal mit einem anderen Namen existiert, empfehle ich Ihnen, den Kanalnamen zu ändern in `suggestions`'
+        'This Server has no channel named "suggestions", if the channel exists with some other name, I recommend you to change the channel name to `suggestions`'
       );
     }
     await message.channel.send(
-      `${message.author}, Ihr Vorschlag wurde übermittelt.`
+      `${message.author}, Your Suggestion has been submitted!`
     );
 
     const embed = new Discord.MessageEmbed()
-      .setTitle("**Neue Vorschläge**")
+      .setTitle("New Suggestion")
       .setDescription(`${msg}`)
-      .setFooter(`Vorgeschlagen von: ${message.author.tag}`)
+      .setFooter(`Suggested by ${message.author.tag}`)
       .setColor("RANDOM");
 
     suggestionchannel
       .send({ embeds: [embed] })
       .then(function (message, str) {
-        message.react("✅");
-        message.react("❎");
+        message.react(":yes:747387883123376181");
+        message.react(":no:747388029202595881");
       })
       .catch(function () {});
   },

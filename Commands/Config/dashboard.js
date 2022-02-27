@@ -7,7 +7,7 @@ module.exports = {
     userPerms: ["ADMINISITRATOR"],
     run: async(client, message, args)=>{
         if (!args[0]){
-            return message.channel.send(`🚫 | Bitte geben Sie eine Option an! Verfügbare Optionen:\`\`\`js\nadmin\nwelcomer\nlogging\n\`\`\``);
+            return message.channel.send(`Bitte gib eine Option an! Verfügbare Optionen:\`\`\`js\nadmin\nwelcomer\nlogging\n\`\`\``);
         }
         if (args[0] === "admin") {
             const adminMenu = new MessageActionRow()
@@ -20,22 +20,22 @@ module.exports = {
                 .addOptions([
                     {
                         label: "Antilink",
-                        description: "Akzeptieren oder Deaktivieren Antilink-System!",
+                        description: "Aktiviren oder Deaktieren Antilink System!",
                         value: "antilink",
                     },
                     {
                         label: "AutoRole",
-                        description: "Akzeptieren oder Deaktivieren AutoRole-System!",
+                        description: "Aktiviren oder Deaktieren AutoRole System!",
                         value: "autorole",
                     },
                     {
                         label: "AutoMod",
-                        description: "Akzeptieren oder Deaktivieren AutoMod-System!",
+                        description: "Aktiviren oder Deaktieren AutoMod System!",
                         value: "automod",
                     },
                     {
                         label: "Prefix",
-                        description: "Das Prefix für Ihren Server ändern.",
+                        description: "Ändere das Prefix des Bots für deinen Server!",
                         value: "prefix"
                     }
                 ])
@@ -54,27 +54,27 @@ module.exports = {
                 .addOptions([
                     {
                         label: "Welcome Channel",
-                        description: "Welcome-Channel für Ihren Server einrichten.",
+                        description: "Stell den Willkommenskanal für den Server ein!",
                         value: "welcome_channel",
                     },
                     {
                         label: "Leave Channel",
-                        description: "Leave-Channel für Ihren Server einrichten.",
+                        description: "Stell den Leaveskanal für den Server ein!",
                         value: "leave_channel",
                     },
                     {
                         label: "Welcome Message",
-                        description: "Welcome-Message für Ihren Server einrichten.",
+                        description: "Stell die Willkommensnachricht für den Server ein!",
                         value: "welcome_message",
                     },
                     {
                         label: "Leave Message",
-                        description: "Leave-Message für Ihren Server einrichten.",
+                        description: "Stell die Leavesnachricht für den Server ein!",
                         value: "leave_message",
                     },
                     {
                         label: "Variables for Welcomer",
-                        description: "Zeigt alle verfügbaren Variablen zur Verwendung in benutzerdefinierten Nachrichten an.",
+                        description: "Zeigt alle verfügbaren Variablen zur Verwendung in benutzerdefinierten Nachrichten an",
                         value: "variables",
                     }
                 ])
@@ -93,32 +93,32 @@ module.exports = {
                 .addOptions([
                     {
                         label: "Channel Updates",
-                        description: "Lege den Kanal für die Protokollierung von Kanalaktualisierungen fest.",
+                        description: "Lege den Kanal für die Protokollierung von Kanalaktualisierungen fest",
                         value: "channel_logs",
                     },
                     {
                         label: "Member Updates",
-                        description: "Lege den Kanal für die Protokollierung von Mitgliederaktualisierungen fest.",
+                        description: "Lege den Kanal für die Protokollierung von Mitgliederaktualisierungen fest",
                         value: "member_updates",
                     },
                     {
                         label: "Message Logs",
-                        description: "Lege den Kanal für Nachrichtenprotokolle fest.",
+                        description: "Lege den Kanal für Nachrichtenprotokolle fest",
                         value: "message_logs",
                     },
                     {
                         label: "Role Updates",
-                        description: "Lege den Kanal für die Protokollierung von Rollenaktualisierungen fest.",
+                        description: "Lege den Kanal für die Protokollierung von Rollenaktualisierungen fest",
                         value: "role_updates",
                     },
                     {
                         label: "Server Updates",
-                        description: "Lege den Kanal für die Protokollierung der Server-Updates fest.",
+                        description: "Stelle den Kanal für die Protokollierung der Serveraktualisierungen ein",
                         value: "server_updates",
                     },
                     {
                         label: "Voice State Updates",
-                        description: "Lege den Kanal für die Protokollierung von Sprachstatusaktualisierungen fest.",
+                        description: "Stelle den Kanal für die Protokollierung von Sprachstatusaktualisierungen ein",
                         value: "voice_state_updates",
                     }
                 ])
@@ -126,7 +126,7 @@ module.exports = {
 
             return message.channel.send({ content: "Logging Settings" ,components: [loggingMenu]})
         } else {
-            return message.channel.send("🚫 | Ups, diese Option scheint nicht zu existieren!!")
+            return message.channel.send("🚫 | Diese Option scheint es nicht zu geben!")
         }
     }
 }

@@ -9,19 +9,19 @@ module.exports = {
 			embed: {
 				title: 'Guess The Pokémon | Weky Development',
 				description:
-					'**Type:**\n{{type}}\n\n**Abilities:**\n{{abilities}}\n\nSie haben nur noch **{{time}}**, um das Pokémon zu erraten.',
+					'**Type:**\n{{type}}\n\n**Abilities:**\n{{abilities}}\n\nYou only have **{{time}}** to guess the pokémon.',
 				color: '#5865F2',
 				footer: 'Naneko Games',
 				timestamp: true
 			},
-			thinkMessage: 'Ich denke noch..',
-			othersMessage: 'Nur mein geliebtes Meister: <@{{author}}> kann die Button verwenden!',
+			thinkMessage: 'I am thinking',
+			othersMessage: 'Only <@{{author}}> can use the buttons!',
 			winMessage:
-				'GG, Es war ein **{{answer}}**. Sie haben es in **{{time}}** richtig erraten. :tada:',
-			loseMessage: 'Viel Glück beim nächsten Mal! Es war ein **{{answer}}**.',
+				'GG, It was a **{{answer}}**. You got it correct in **{{time}}**.',
+			loseMessage: 'Better luck next time! It was a **{{answer}}**.',
 			time: 60000,
-			incorrectMessage: "Nein, {{author}}! Das Pokémon ist nicht `{{answer}}`. Es ist wirklich Schade, versuchen Sie es später nochmal.",
-			buttonText: 'Abbrechen'
+			incorrectMessage: "No {{author}}! The pokémon isn't `{{answer}}`",
+			buttonText: 'Cancel'
 		});
 	}
 }

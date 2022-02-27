@@ -31,7 +31,7 @@ module.exports = {
       if (!CheckEmoji[0])
         return message.channel.send(`Bitte gib mir ein gültiges Emoji!`);
       message.channel.send(
-        `Sie können normale Emoji verwenden, ohne auf den Server hinzuzufügen!`
+        `Du kannst normale Emoji verwenden, ohne auf den Server hinzuzufügen!`
       );
     }
   },

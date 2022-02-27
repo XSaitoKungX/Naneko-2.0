@@ -13,7 +13,7 @@ module.exports = async(interaction, client) => {
 
         if (!data) {
 
-            msg.edit('Senden Sie die **ROLE ID** für Autorole!')
+            msg.edit('Send the **ROLE ID** for autorole!')
 
             const filter = (m) => m.author.id == interaction.message.author.id
 
@@ -27,7 +27,7 @@ module.exports = async(interaction, client) => {
                 })
     
                 newData.save();
-            return msg.edit(`Autorole auf ${interaction.guild.roles.cache.get(role)} gesetzt.`)
+            return msg.edit(`Autorole set to ${interaction.guild.roles.cache.get(role)}`)
 
         } else if (data) {
             
@@ -35,7 +35,7 @@ module.exports = async(interaction, client) => {
                 GuildID: interaction.guild.id
             })
 
-            return msg.edit(`Autorole wurde jetzt deaktiviert!`)
+            return msg.edit(`Autorole has been disabled!`)
         }
     }
 }

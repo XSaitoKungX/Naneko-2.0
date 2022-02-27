@@ -27,7 +27,7 @@ module.exports = {
           GuildID: message.guild.id
         });
 
-        message.channel.send(`Autorole ist aktiv und die Rolle ist auf: ${message.mentions.roles.first()} gesetzt.`);
+        message.channel.send(`✅ | Autorole ist aktiv und Rolle auf ${message.mentions.roles.first()} gesetzt.`);
 
         let newData = new roleData({
           Role: message.mentions.roles.first().id,
@@ -35,7 +35,7 @@ module.exports = {
         });
         newData.save();
       } else if (!data) {
-        message.channel.send(`Autorole ist aktiv und die Rolle ist auf: ${message.mentions.roles.first()} gesetzt.`);
+        message.channel.send(`✅ | Autorole ist aktiv und Rolle auf ${message.mentions.roles.first()} gesetzt.`);
 
         let newData = new roleData({
           Role: message.mentions.roles.first().id,
@@ -53,10 +53,10 @@ module.exports = {
           GuildID: message.guild.id
         });
 
-        return message.channel.send(`Autorole wurde erfolgreich deaktiviert!`);
+        return message.channel.send(`✅ | Autorole ist erfolgreich deaktiviert!`);
 
       } else if (!data2) {
-        return message.channel.send(`Autorole würde noch nicht eingerichtet!`)
+        return message.channel.send(`🚫 | Autorole ist noch nicht eingestellt. Bitte versuche es später nochmal!`)
       }
     }
   }

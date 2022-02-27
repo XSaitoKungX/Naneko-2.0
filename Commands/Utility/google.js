@@ -9,7 +9,7 @@ module.exports = {
     const text2 = args.join("+");
     const google = `https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2000px-Google_%22G%22_Logo.svg.png`;
     if (!text2) {
-      return message.channel.send("🚫 | Geben Sie etwas ein, nach denen gesucht werden soll!");
+      return message.channel.send("Enter some to search for");
     }
     const embed = new Discord.MessageEmbed()
       .setAuthor(
@@ -20,7 +20,7 @@ module.exports = {
         `https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2000px-Google_%22G%22_Logo.svg.png`
       )
       .setDescription(
-        `**Gesucht für: **\n${text1} \n\n**Ergebnis: **\n[Das habe ich gefunden](https://google.com/search?q=${text2})`
+        `**Searched for: **\n${text1} \n\n**Result: **\n[Here's What I found](https://google.com/search?q=${text2})`
       )
       .setThumbnail(google)
       .setColor("RANDOM");

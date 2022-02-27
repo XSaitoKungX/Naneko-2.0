@@ -18,14 +18,14 @@ module.exports = async(interaction, client) => {
 
             newData.save();
 
-            return msg.edit('Antilink System wurde erfolgreich aktiviert!')
+            return msg.edit('Antilink System has been enabled!')
         } else if (data) {
             
             await antilinkData.findOneAndRemove({
                 GuildID: interaction.guild.id
             })
 
-            return msg.edit('Antilink System wurde jetzt deaktiviert!')
+            return msg.edit('Antilink System has been disabled!')
         }
     }
 }

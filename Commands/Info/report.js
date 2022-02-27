@@ -5,18 +5,18 @@ module.exports = {
   description: "Report a bug",
   botPerms: ["EMBED_LINKS"],
   run: async (client, message, args) => {
-    const reportchannel = client.channels.cache.get("911607446345236510");
+    const reportchannel = client.channels.cache.get("747699213814464522");
     const report = args.join(" ");
     if (!report) {
       return message.channel.send(
-        "Geben Sie die Beschreibung des aufgetretenen Fehlers ein!"
+        "Enter the Description of the bug you encountered!"
       );
     }
     message.channel.send(
-      `${message.author}, Ihr Report wurde erfolgreich übermittelt. Unser Mod-Teams werden Ihnen so schnell wie möglich antworten`
+      `${message.author}, Your Report has been Successfully Submitted. Our Mod Team will reply to you as soon as possible`
     );
     const embed = new Discord.MessageEmbed()
-      .setTitle("⚠ | **NEUE FEHLERMELDUNG!**")
+      .setTitle("New Bug Report")
       .setDescription(`${report} \n\nBy: ${message.author.tag}`)
       .setFooter(`User ID: ${message.author.id}`)
       .setColor("RANDOM");
@@ -24,10 +24,10 @@ module.exports = {
     reportchannel.send({embeds: [embed]});
   },
   catch(error) {
-    const errorlogs = client.channels.cache.get("912404023280304148");
+    const errorlogs = client.channels.cache.get("747750993583669258");
     message.channel.send(
-      "Anscheinend ist ein Fehler aufgetreten. Der Fehler wurde an die Berichtssektion gemeldet!"
+      "Looks Like an Error has Ocurred. The Error has been reported to the Report Section!"
     );
-    errorlogs.send("Fehler beim Reportbefehl \nError: \n" + error);
+    errorlogs.send("Error on Report Command \nError: \n" + error);
   },
 };

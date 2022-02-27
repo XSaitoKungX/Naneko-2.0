@@ -9,13 +9,13 @@ module.exports = {
     const place = args.join("-");
     if (!place) {
       return message.channel.send(
-        "🚫 | Bitte geben Sie den Namen eines Landes/einer Stadt/einer Stadt ein."
+        "Please enter the name of a Country/City/Town"
       );
     }
     const link = `https://wttr.in/${place}.png?m`;
     const weblink = `https://wttr.in/${place}`;
     const embed = new Discord.MessageEmbed()
-      .setTitle(`${name}'s Wetter für die nächsten 3 Tage`)
+      .setTitle(`${name}'s Weather for Next 3 days`)
       .setImage(link)
       .setFooter("Credits to Wttr.in")
       .setColor("RANDOM");

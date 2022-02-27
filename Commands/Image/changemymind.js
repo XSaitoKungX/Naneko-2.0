@@ -9,7 +9,7 @@ module.exports = {
   run: async (client, message, args) => {
     const text = args.join("+");
     if (!text) {
-      return message.channel.send("🚫 | Sie müssen etwas schreiben!!");
+      return message.channel.send("Enter some text!");
     }
     message.channel.send({
       files: [

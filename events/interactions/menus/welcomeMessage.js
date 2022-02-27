@@ -14,7 +14,7 @@ module.exports = async(interaction, client)=>{
         })
 
         if (!data) {
-            await msg.edit("Bitte senden Sie die **NACHRICHT**, um sie als Willkommensnachricht einzurichten!")
+            await msg.edit("Please send the **MESSAGE** to be setup as the Welcome Message!")
             
             const filter = (m) => m.author.id === interaction.member.id
 
@@ -32,7 +32,7 @@ module.exports = async(interaction, client)=>{
             newData.save()
 
             await collector.stop()
-            return msg.edit(`Goodbye Message wurde eingestellt auf:\n${joinMsg}`)
+            return msg.edit(`Goodbye Message has been set to:\n${joinMsg}`)
         })
 
         collector.on("end", async(collected) => {
@@ -43,7 +43,7 @@ module.exports = async(interaction, client)=>{
                 GuildID: interaction.guild.id
             })
 
-            return msg.edit('Welcome Message wurde erfolgreich gelöscht!!')
+            return msg.edit('Welcome Message has been removed!')
         }
     }
 }

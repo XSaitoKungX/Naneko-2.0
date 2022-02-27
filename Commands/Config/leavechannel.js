@@ -7,7 +7,7 @@ module.exports = {
   botPerms: ["MANAGE_CHANNELS"],
   run: async (client, message, args) => {
     if (!args[0]) {
-      return message.channel.send("`Usage: n.leavechannel <#channel|off>`");
+      return message.channel.send("`Usage: =leavechannel <#channel|off>`");
     }
     if (message.mentions.channels.first()) {
       const data = await prefixModel.findOne({
@@ -20,7 +20,7 @@ module.exports = {
         });
 
         message.channel.send(
-          `Ich habe Leave-Channel jetzt auf --> ${message.mentions.channels.first()} eingestellt.`
+          `Leave Channel eingestellt auf: ${message.mentions.channels.first()}`
         );
 
         let newData = new prefixModel({
@@ -30,7 +30,7 @@ module.exports = {
         newData.save();
       } else if (!data) {
         message.channel.send(
-          `Ich habe Leave-Channel jetzt auf --> ${message.mentions.channels.first()} eingestellt.`
+          `Leave Channel eingestellt auf: ${message.mentions.channels.first()}`
         );
 
         let newData = new prefixModel({
@@ -49,9 +49,9 @@ module.exports = {
           GuildID: message.guild.id,
         });
 
-        message.channel.send(`Leave-Channel wurde erfolgreich deaktiviert!`);
+        message.channel.send(`✅ | Leave channel ist erfolgreich deaktiviert!`);
       } else if (!data2) {
-        return message.channel.send(`🚫 | Leave-Channel wurde noch nicht eingerichtet! Bitte richten Sie zuerst einen Leave-Channel ein und dann versuchen Sie es nochmal :)`);
+        return message.channel.send(`🚫 | Leave channel ist noch nicht eingestellt. Bitte versuche es später nochmal!`);
       }
     }
   },

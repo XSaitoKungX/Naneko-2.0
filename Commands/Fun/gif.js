@@ -7,7 +7,7 @@ module.exports = {
   botPerms: ["EMBED_LINKS", "MANAGE_MESSAGES"],
   run: async (client, message, args) => {
     if (args.length === 0) {
-      message.channel.send("🚫 | Es tut mir leid, leider konnte ich keine Suchbegriffe finden! :pleading_face:");
+      message.channel.send("No Search terms!");
       return;
     }
     if (args.length === 1) {

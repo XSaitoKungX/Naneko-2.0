@@ -14,7 +14,7 @@ module.exports = async(interaction, client)=>{
         })
 
         if (!data) {
-            await msg.edit("Bitte senden Sie die **NACHRICHT**, um sie als Abschiedsnachricht einzurichten!")
+            await msg.edit("Please send the **MESSAGE** to be setup as Goodbye Message!")
             const filter = (m) => m.author.id === interaction.member.id
 
             const collector = await interaction.channel.createMessageCollector({ filter, time: 60000 })
@@ -31,7 +31,7 @@ module.exports = async(interaction, client)=>{
             newData.save()
 
             await collector.stop()
-            return msg.edit(`Goodbye-Message wurde eingestellt auf:\n${goodbyeMsg}`)
+            return msg.edit(`Goodbye Message has been set to:\n${goodbyeMsg}`)
         })
 
         collector.on("end", async(collected) => {
@@ -42,7 +42,7 @@ module.exports = async(interaction, client)=>{
                 GuildID: interaction.guild.id
             })
 
-            return msg.edit('Goodbye-Message wurde erfolgreich gelöscht!!')
+            return msg.edit('Goodbye Message has been removed!')
         }
     }
 }

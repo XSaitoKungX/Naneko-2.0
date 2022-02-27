@@ -42,15 +42,13 @@ module.exports = {
       .setAuthor(`${message.guild.name}`, message.guild.iconURL())
       .setThumbnail(servericon)
       .addField(
-        `Allgemeine Information`,
-        `Owner: ${message.guild.owner} \nRegion: \`${
-          region[message.guild.region]
-        }\` \nVerifizierungslevel: \`${
+        `General Info`,
+        `Owner: ${message.guild.members.cache.get(message.guild.ownerId)} \nVerification Lvl: \`${
           verifLevels[message.guild.verificationLevel]
         }\``
       )
       .addField(
-        `Überblick`,
+        `Overview`,
         `Total Channels: \`${
           message.guild.channels.cache.size
         }\` \nText Channels: \`${
@@ -73,9 +71,9 @@ module.exports = {
       )
       .addField(
         `Misc. Info`,
-        `Sie sind den Server beigetreten am: \n\`${moment(mention.joinedAt).format(
+        `You Joined on: \n\`${moment(mention.joinedAt).format(
           "dddd, MMMM Do YYYY, h:mm:ss A"
-        )}\` \nErstellt am: \n\`${moment(message.guild.createdAt).format(
+        )}\` \nCreated On: \n\`${moment(message.guild.createdAt).format(
           "dddd, MMMM Do YYYY, h:mm:ss A"
         )}\``
       )

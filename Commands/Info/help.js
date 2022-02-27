@@ -11,21 +11,21 @@ module.exports = {
       let cmd = client.commands.get(command);
 
       if (!cmd) {
-        return message.channel.send("🚫 | Konnte diesen Befehl nicht finden!")
+        return message.channel.send("Couldn't find that command!")
       } else if (cmd) {
-        let description = cmd.description ? cmd.description : "Keine Beschreibung verfügbar.";
-        let aliases = cmd.aliases ? cmd.aliases.join(", ") : "Keine Aliases verfügbar.";
-        let botPerms = cmd.botPerms ? cmd.botPerms.join(", ") : "Keine Berechtigungen erforderlich.";
-        let userPerms = cmd.userPerms ? cmd.userPerms.join(", ") : "Keine Berechtigungen erforderlich.";
+        let description = cmd.description ? cmd.description : "No description available.";
+        let aliases = cmd.aliases ? cmd.aliases.join(", ") : "No aliases available.";
+        let botPerms = cmd.botPerms ? cmd.botPerms.join(", ") : "No permissions required.";
+        let userPerms = cmd.userPerms ? cmd.userPerms.join(", ") : "No permissions required.";
         let ownerOnly = cmd.ownerOnly ? "Yes" : "No";
         let nsfwOnly = cmd.nsfwOnly ? "Yes" : "No";
-        let cooldown = cmd.cooldown ? cmd.cooldown : "Kein Cooldown.";
+        let cooldown = cmd.cooldown ? cmd.cooldown : "No cooldown.";
         let isDisabled = cmd.isDisabled ? "Yes" : "No";
 
         let helpEmbed = new MessageEmbed()
-        .setTitle(`Help Commands für **${cmd.name}**`)
+        .setTitle(`Help for **${cmd.name}**`)
         .addField("Name", `${cmd.name}`, true)
-        .addField("Beschreibung", `${description}`, true)
+        .addField("Description", `${description}`, true)
         .addField("Aliases", `${aliases}`, true)
         .addField("Owner Only", `${ownerOnly}`, true)
         .addField("NSFW Only", `${nsfwOnly}`, true)
@@ -50,61 +50,61 @@ module.exports = {
       .addOptions([
         {
           label: "Settings",
-          description: "Die Bot-Einstellungen konfigurieren",
+          description: "Change the bot settings",
           value: "settings",
           emoji: "🛠"
         },
         {
           label: "Activities",
-          description: "Greifen Sie auf die neue Discord-Aktivitäten-Funktion zu",
+          description: "Access the new Discord Activities Feature",
           value: "activities",
           emoji: "🎮"
         },
         {
           label: "Fun",
-          description: "Zeigt alle Fun Commands an",
+          description: "Shows all the fun commands",
           value: "fun",
           emoji: "🎲"
         },
         {
           label: "Image",
-          description: "Zeigt alle Image Commands an",
+          description: "Shows all the image commands",
           value: "image",
           emoji: "🖼"
         },
         {
           label: "Information",
-          description: "Zeigt alle Information Commands an",
+          description: "Shows all the information commands",
           value: "info",
           emoji: "📢"
         },
         {
           label: "Moderation",
-          description: "Zeigt alle Moderation Commands an",
+          description: "Shows all the moderation commands",
           value: "moderation",
           emoji: "🔒"
         },
         {
           label: "Music",
-          description: "Zeigt alle Musik Commands an",
+          description: "Shows all the Music commands!",
           value: "music",
           emoji: "🎵"
         },
         {
           label: "NSFW",
-          description: "Zeigt alle NSFW Commands an",
+          description: "Shows all the NSFW commands",
           value: "nsfw",
           emoji: "🔞"
         },
         {
           label: "Utility",
-          description: "Zeigt alle Utility Commands an",
+          description: "Shows all the utility commands",
           value: "utility",
           emoji: "🔧"
         },
         {
           label: "Games",
-          description: "Zeigt alle Games Commands an",
+          description: "Shows all the game commands",
           value: "game",
           emoji: "🎮"
         }
@@ -113,7 +113,7 @@ module.exports = {
 
     let editEmbed = new MessageEmbed()
     .setTitle('Help Menu')
-    .setDescription('Wählen Sie eine Option aus dem Menü unten!')
+    .setDescription('Choose an option from the menu below!')
     .setColor("GREEN")
 
       message.channel.send({ embeds: [editEmbed], components: [helpMenu]}).then(msg=>{

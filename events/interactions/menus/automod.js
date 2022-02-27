@@ -18,14 +18,14 @@ module.exports = async(interaction, client) => {
 
             newData.save();
 
-            return msg.edit('Automod wurde erfolgreich aktiviert!')
+            return msg.edit('Automod has been enabled')
         } else if (data) {
             
             await automodData.findOneAndRemove({
                 GuildID: interaction.guild.id
             })
 
-            return msg.edit('Automod wurde jetzt deaktiviert!')
+            return msg.edit('Automod has been disabled!')
         }
     }
 }

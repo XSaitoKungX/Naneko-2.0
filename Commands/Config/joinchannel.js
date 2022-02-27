@@ -8,7 +8,7 @@ module.exports = {
   botPerms: ["MANAGE_CHANNELS"],
   run: async (client, message, args) => {
     if (!args[0]) {
-      return message.channel.send(`\`Usage: n.joinchannel <#channel|off>\``);
+      return message.channel.send(`\`Usage: =joinchannel <#channel|off>\``);
     }
     if (message.mentions.channels.first()) {
       const data = await prefixModel.findOne({
@@ -21,7 +21,7 @@ module.exports = {
         });
 
         message.channel.send(
-          `Ich habe Join-Channel jetzt auf --> ${message.mentions.channels.first()} eingestellt.`
+          `Kanal beitreten eingestellt auf: ${message.mentions.channels.first()}`
         );
 
         let newData = new prefixModel({
@@ -31,7 +31,7 @@ module.exports = {
         newData.save();
       } else if (!data) {
         message.channel.send(
-          `Ich habe Join-Channel jetzt auf --> ${message.mentions.channels.first()} eingestellt.`
+          `Kanal beitreten eingestellt auf: ${message.mentions.channels.first()}`
         );
 
         let newData = new prefixModel({
@@ -50,9 +50,9 @@ module.exports = {
           GuildID: message.guild.id,
         });
 
-        return message.channel.send(`Join-Channel wurde erfolgreich deaktiviert!`);
+        return message.channel.send(`✅ | Join channel ist erfolgreich deaktiviert!`);
       } else if (!data2) {
-        return message.channel.send(`🚫 | Join-Channel wurde noch nicht eingerichtet! Bitte richten Sie zuerst einen Join-Channel ein und dann versuchen Sie es nochmal :)`);
+        return message.channel.send(`🚫 | Join channel ist noch nicht eingestellt. Bitte versuche es später nochmal!`);
       }
     }
   },

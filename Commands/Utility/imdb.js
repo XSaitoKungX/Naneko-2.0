@@ -9,7 +9,7 @@ module.exports = {
   run: async (client, message, args) => {
     const name = args.join(" ");
     if (!name) {
-      return message.channel.send("Bitte geben Sie den Namen eines Films oder einer Serie an!");
+      return message.channel.send("Please Give the name of a movie or series!");
     }
 
     const imob = new imdb.Client({ apiKey: "5e36f0db" });
@@ -21,7 +21,7 @@ module.exports = {
       .setColor("RANDOM")
       .setThumbnail(movie.poster)
       .setDescription(
-        `Beschreibung: \`${movie.plot}\`\nBewertungen: \`${movie.ratings}\`\nReligion: \`${movie.country}\`\nSprache: \`${movie.languages}\`\nGenre: \`${movie.type}\``
+        `Description: \`${movie.plot}\`\nRatings: \`${movie.ratings}\`\nCountry: \`${movie.country}\`\nLanguages: \`${movie.languages}\`\nType: \`${movie.type}\``
       );
     message.channel.send({ embeds: [embed] });
   },

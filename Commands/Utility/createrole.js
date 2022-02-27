@@ -11,19 +11,19 @@ module.exports = {
     const regex = !/[^a-zA-Z0-9]+/g.test(name);
 
     if (!args[0]) {
-      return message.channel.send("`Usage: n.createrole <colorname> <Name>`");
+      return message.channel.send("`Usage: =createrole <colorname> <Name>`");
     }
     if (!name) {
-      return message.channel.send("🚫 | Sie müssen einen Namen für Ihre Rolle angeben!!");
+      return message.channel.send("You need to specify a name for your Role");
     }
     if (regex === false) {
       return message.channel.send(
-        "🚫 | Das ist kein gültiger Rollenname. Es darf nur Buchstaben und Zahlen enthalten!!"
+        "That is not valid role name. It can contain only letters and numbers"
       );
     }
     if (name.length > 100) {
       return message.channel.send(
-        "Ihre Rolle darf nicht länger als 100 Zeichen sein!!"
+        "Your role can't be more than 100 characters long"
       );
     }
     message.guild.roles.create({
@@ -38,11 +38,11 @@ module.exports = {
         message.author.displayAvatarURL()
       )
       .setColor("RANDOM").setDescription(`
-**Rolle: ** ${name}
+**Role: ** ${name}
 **Action: ** New Role Created
-**Rolle Farbe: ** ${args[0]}
+**Role Color: ** ${args[0]}
 **Channel: ** ${message.channel}
-**Von: ** ${message.member}
+**By: ** ${message.member}
       `);
     message.channel.send({ embeds: [embed] });
   },

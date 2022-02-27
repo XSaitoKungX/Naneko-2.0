@@ -7,7 +7,7 @@ module.exports = {
   name: "hentaiass",
   description: "Sends hentai ass pictures.",
   run: async (client, message, args) => {
-    var errMessage = "NSFWs sind für diesen Channel nicht erlaubt!";
+    var errMessage = "This is not an NSFW Channel";
     if (!message.channel.nsfw) {
       message.react("💢");
 

@@ -8,7 +8,7 @@ module.exports = (client) => {
   const guildmember = client.users.cache.size;
   
  client.user.setPresence({ status: "online" });
-let textList = [' About handling command',' in: ' + guildin + ' Server.' + 'Serving: ' + guildmember + ' Member',`Current Cpu core : ${os.cpuCount()}`]
+let textList = [' About handling command',' in: ' + guildin + ' Server.' + 'Serving: ' + guildmember + ' member',`Current Cpu core : ${os.cpuCount()}`]
  client.user.setPresence({ status: "online" });
  setInterval(() => {
    var text = textList[Math.floor(Math.random() * textList.length)];
@@ -30,9 +30,9 @@ let textList = [' About handling command',' in: ' + guildin + ' Server.' + 'Serv
   });
 
   console.log(
-    chalk.bgMagentaBright.black(` ${client.guilds.cache.size} Servers `),
-    chalk.bgMagentaBright.black(` ${client.channels.cache.size} Channels `),
-    chalk.bgMagentaBright.black(` ${allMembers.size} Members `)
+    chalk.bgMagentaBright.black(` ${client.guilds.cache.size} servers `),
+    chalk.bgMagentaBright.black(` ${client.channels.cache.size} channels `),
+    chalk.bgMagentaBright.black(` ${allMembers.size} members `)
   );
 
   mongoose
@@ -45,14 +45,14 @@ let textList = [' About handling command',' in: ' + guildin + ' Server.' + 'Serv
     .then(
       console.log(
         chalk.bgGreenBright.black(
-          ` ${client.user.username} Verbindung zu Mongo DB erfolgreich hergestellt `
+          ` ${client.user.username} connected to Mongo DB `
         )
       )
     )
     .catch((err) =>
       console.log(
         chalk.bgRedBright.black(
-          ` ${client.user.username} konnte keine Verbindung zu Mongo DB herstellen `
+          ` ${client.user.username} could not connect to mongo DB `
         )
       )
     );

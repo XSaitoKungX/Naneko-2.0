@@ -6,13 +6,13 @@ module.exports = {
     run: async(client, message, args) => {
 
       if (!message.member.voice.channelId) {
-        return message.channel.send('🚫 | Sie müssen zuerst einem Sprachkanal beitreten!')
+        return message.channel.send('🚫 | Du musst zuerst einem Sprachkanal beitreten!')
       }
         client.discordTogether.createTogetherCode(message.member.voice.channelId, 'youtubeDev').then(async(invite) => {
             
             let embed = new MessageEmbed()
             .setTitle("Youtube Together")
-            .setDescription(`[Click Here](${invite.code}) um **Youtube Together** zu akzeptieren!\n\`\`\`\nNote: Diese Funktion ist für mobile Benutzer nicht verfügbar!\`\`\``)
+            .setDescription(`[Click Here](${invite.code}) um auf Youtube Together zuzugreifen!\n\`\`\`\nNote: Diese Funktion ist nur für mobile Benutzer nicht verfügbar!\`\`\``)
             .setColor("RED")
             .setFooter(`Requested By: ${message.author.tag}`)
             

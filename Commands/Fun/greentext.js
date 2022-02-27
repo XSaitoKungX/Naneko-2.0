@@ -6,7 +6,7 @@ module.exports = {
   run: async (client, message, args) => {
     const text = args.join(" ");
     if (!text) {
-      return message.channel.send("🚫 | Sie müssen etwas eingeben!!");
+      return message.channel.send("🚫 | Du musst Text eingeben!");
     }
     message.channel.send(`\`\`\`css\n${text}\n\`\`\``);
   },

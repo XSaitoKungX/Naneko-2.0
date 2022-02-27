@@ -14,7 +14,7 @@ module.exports = {
     //command
 
     //Checks channel for nsfw
-    var errMessage = "NSFWs sind für diesen Channel nicht erlaubt!";
+    var errMessage = "This is not an NSFW Channel";
     if (!message.channel.nsfw) {
       message.react("💢");
 
@@ -28,7 +28,7 @@ module.exports = {
       message.content.toUpperCase().includes("GORE")
     )
       return message.channel.send(
-        "🚫 | So etwas ist nicht erlaubt! Nicht einmal in NSFW-Kanälen!"
+        "That kind of stuff is not allowed! Not even in NSFW channels!"
       );
 
     var query = message.content.split(/\s+/g).slice(1).join(" ");
@@ -48,9 +48,9 @@ module.exports = {
       })
       .catch((err) => {
         if (err.name === "booruError") {
-          return message.channel.send(`Keine Ergebnisse gefunden für **${query}**!`);
+          return message.channel.send(`No results found for **${query}**!`);
         } else {
-          return message.channel.send(`Keine Ergebnisse gefunden für **${query}**!`);
+          return message.channel.send(`No results found for **${query}**!`);
         }
       });
   },

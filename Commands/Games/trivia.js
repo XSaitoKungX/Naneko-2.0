@@ -8,23 +8,23 @@ module.exports = {
 			message: message,
 			embed: {
 				title: 'Trivia | Weky Development',
-				description: 'Sie haben nur **{{time}}** Zeit, um die Antwort zu erraten!',
+				description: 'You only have **{{time}}** to guess the answer!',
 				color: '#5865F2',
 				footer: 'Naneko Games',
 				timestamp: true
 			},
 			difficulty: 'hard',
-			thinkMessage: 'Ich bin am Überlegen..',
+			thinkMessage: 'I am thinking',
 			winMessage:
-				'GG, es war **{{answer}}**. Sie haben in **{{time}}** die richtige Antwort gegeben. :tada:',
-			loseMessage: 'Viel Glück beim nächsten Mal! Die richtige Antwort war **{{answer}}**.',
+				'GG, It was **{{answer}}**. You gave the correct answer in **{{time}}**.',
+			loseMessage: 'Better luck next time! The correct answer was **{{answer}}**.',
 			emojis: {
 				one: '1️⃣',
 				two: '2️⃣',
 				three: '3️⃣',
 				four: '4️⃣',
 			},
-			othersMessage: 'Nur mein Geliebtes Meister: <@{{author}}> kann die Button verwenden!',
+			othersMessage: 'Only <@{{author}}> can use the buttons!',
 			returnWinner: false
 		});
 	}

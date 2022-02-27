@@ -25,24 +25,20 @@ module.exports = async (member) => {
 
      let embed = new MessageEmbed()
        .setDescription(joinmessage)
-       .setColor("RANDOM");
+       .setColor("GREEN");
 
      let channel = data.Welcome;
 
      member.guild.channels.cache.get(channel).send({embeds: [embed]});
      
    } else if (!data2) {
-     let embed2 = new MessageEmbed
-     .setTitle("**NEWS JOIN: WELCOME!** :tada:")
+     let embed2 = new MessageEmbed()
+     .setTitle("Welcome")
       .setDescription(
-        `Heyyy, ${member}!! Willkommen auf **${member.guild.name}!!**\n
-        Bitte vergessen Sie nicht erstmal die Regeln durchzulesen und dann zu akzeptieren, sonst können Sie die Kanäle und VC nicht sehen!! 
-        Außerdem vergessen Sie nicht die Selbst-Rollen zu holen, damit Sie auf den neunsten Stand sind, falls wir Updates oder Events haben!\n
-        Wir wünschen Ihnen viel Spaß auf unseren Server 🥰 Und falls Sie fragen haben, unseren Server-Teams stehen Ihnen jederzeit zur Verfügung!\n
-        LG Ihren ${member.guild.name} Team`
+        `${member}, Welcome to **${member.guild.name}**! We hope you like our Server! Enjoy Your Stay here!`
       )
-      .setFooter(`WOWWW!!! Wir haben jetzt ${member.guild.memberCount} Members auf dem Server!`)
-      .setColor("RANDOM");
+      .setFooter(`We are now ${member.guild.memberCount} members`)
+      .setColor("GREEN");
      
      let channel = data.Welcome
 

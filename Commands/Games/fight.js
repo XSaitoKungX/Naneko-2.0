@@ -6,7 +6,7 @@ module.exports = {
 	category: "Games",
 	run: async(client, message, args) => {
 		if (!message.mentions.members.first()) {
-			return message.reply("Sie müssen jemanden erwähnen!")
+			return message.reply("You need to mention someone!")
 		}
 		await Fight({
 			message: message,
@@ -24,16 +24,16 @@ module.exports = {
 			  accept: 'Accept',
 			  deny: 'Deny'
 			},
-			acceptMessage: '<@{{challenger}}> hat <@{{opponent}}> zu einem Kampf herausgefordert!',
-			winMessage: 'GG, <@{{winner}}> hat den Kampf gewonnen! :tada:',
-			endMessage: '<@{{opponent}}> hat nicht rechtzeitig geantwortet. Also habe ich das Spiel beenden lassen!',
-			cancelMessage: '<@{{opponent}}> weigerte sich, mit dir zu kämpfen!',
-			fightMessage: '{{player}} Sie sind als erstes dran!',
-			opponentsTurnMessage: 'Bitte warten Sie, bis sich Ihre Gegner bewegen!',
-			highHealthMessage: 'Sie können nicht heilen, wenn Ihre HP über 80 liegt!',
-			lowHealthMessage: 'Du kannst den Kampf nicht abbrechen, wenn deine HP unter 50 liegt!',
+			acceptMessage: '<@{{challenger}}> has challenged <@{{opponent}}> for a fight!',
+			winMessage: 'GG, <@{{winner}}> won the fight!',
+			endMessage: '<@{{opponent}}> didn\'t answer in time. So, I dropped the game!',
+			cancelMessage: '<@{{opponent}}> refused to have a fight with you!',
+			fightMessage: '{{player}} you go first!',
+			opponentsTurnMessage: 'Please wait for your opponents move!',
+			highHealthMessage: 'You cannot heal if your HP is above 80!',
+			lowHealthMessage: 'You cannot cancel the fight if your HP is below 50!',
 			returnWinner: false,
-			othersMessage: 'Nur mein geliebtes Meister: {{author}} kann die Button verwenden!'
+			othersMessage: 'Only {{author}} can use the buttons!'
 		});
 	}
 }

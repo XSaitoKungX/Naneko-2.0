@@ -15,7 +15,7 @@ module.exports = async(interaction, client) => {
         })
 
         if (!data) {
-            await msg.edit("Bitte senden Sie die **CHANNEL ID**, um die Nachrichtenaktualisierungsprotokolle einzurichten")
+            await msg.edit("Please send the **CHANNEL ID** to be setup for Message Update Logs")
 
             const filter = (m) => m.author.id === interaction.member.id
 
@@ -28,7 +28,7 @@ module.exports = async(interaction, client) => {
 
                 let channel = interaction.guild.channels.cache.get(channelID)
 
-                if (!channel) return msg.edit("Ich konnte diesen Kanal leider nicht finden!")
+                if (!channel) return msg.edit("Couldn't find that channel!")
 
                 let newData = new messageData({
                     ChannelID: channelID,
@@ -39,7 +39,7 @@ module.exports = async(interaction, client) => {
 
                 await collector.stop()
     
-                return msg.edit(`Message-Updates werden in --> ${interaction.guild.channels.cache.get(channelID)} angezeigt.`)
+                return msg.edit(`Message updates will be logged in ${interaction.guild.channels.cache.get(channelID)}`)
             })
 
             collector.on('end', async(collected, returnValue) => {
@@ -51,7 +51,7 @@ module.exports = async(interaction, client) => {
                 GuildID: interaction.guild.id
             })
 
-            return msg.edit(`Die Protokollierung von Nachrichtenaktualisierungen wurde gestoppt!`)
+            return msg.edit(`Message Updates Logging has been stopped!`)
         }
     }
 }

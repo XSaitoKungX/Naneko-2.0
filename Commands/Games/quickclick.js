@@ -13,14 +13,14 @@ module.exports = {
 				timestamp: true
 			},
 			time: 60000,
-			waitMessage: 'Die Buttons können jetzt jederzeit erscheinen!',
+			waitMessage: 'The buttons may appear anytime now!',
 			startMessage:
-				'Die erste Person, die der richtiger Button drückt, gewinnt. Du hast dafür **{{time}}** gebraucht!',
-			winMessage: 'GG, <@{{winner}}> hat die Button in **{{time}} Sekunden** gedrückt.',
-			loseMessage: 'Niemand drückte rechtzeitig auf der Button. Also habe ich das Spiel beenden lassen!',
+				'First person to press the correct button will win. You have **{{time}}**!',
+			winMessage: 'GG, <@{{winner}}> pressed the button in **{{time}} seconds**.',
+			loseMessage: 'No one pressed the button in time. So, I dropped the game!',
 			emoji: '👆',
 			ongoingMessage:
-				"In <#{{channel}}> läuft bereits ein Spiel. Sie können keinen neuen anfangen!"
+				"A game is already runnning in <#{{channel}}>. You can't start a new one!"
 		});
 	}
 }

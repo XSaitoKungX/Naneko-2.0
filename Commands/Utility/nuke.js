@@ -10,7 +10,7 @@ module.exports = {
 			const newChannel = await message.channel.clone();
 			await message.channel.delete();
 			newChannel.setPosition(position);
-      newChannel.send(`Channel zerstört von --> ${message.member}`);
+      newChannel.send(`Channel Nuked by ${message.member}`);
 			return newChannel.send("https://media1.tenor.com/images/e275783c9a40b4551481a75a542cdc79/tenor.gif?itemid=3429833")
    }
 }

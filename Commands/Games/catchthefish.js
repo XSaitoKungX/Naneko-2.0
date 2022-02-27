@@ -43,7 +43,7 @@ module.exports = {
 		];
 
 		const msg = await message.channel.send({
-			content: `Fange 3 Fische, um \n\n${randomPos} zu gewinnen!`,
+			content: `Catch 3 fishes to win!\n\n${randomPos}`,
 			components: componentsArray,
 		});
 
@@ -66,7 +66,7 @@ module.exports = {
 					content: positions.win,
 					components: componentsArray,
 				});
-				button.reply({ content: 'Glückwunsch!! Sie haben 3 Fische gefangen! :tada:' });
+				button.reply({ content: 'GG! You caught 3 fishes!' });
 			}
 			else if (data <= -9) {
 				gameEnded = true;
@@ -77,7 +77,7 @@ module.exports = {
 					content: positions.lose,
 					components: componentsArray,
 				});
-				button.reply({ content: 'Wie Schade, Sie haben leider verloren! Bitte versuchen Sie später nochmal. XD' });
+				button.reply({ content: 'GG You lost XD' });
 			}
 			else {
 				if(button) return button.deferUpdate();

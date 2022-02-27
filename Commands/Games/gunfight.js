@@ -85,14 +85,14 @@ module.exports = {
 				content: positions.ended1,
 				components: componentsArray,
 			});
-			return button.reply({ content: `<@${message.author.id}> hat gewonnen! :tada:` });
+			return button.reply({ content: `<@${message.author.id}> won!` });
 		}
 		else if(button.customId === 'shoot2' && button.user.id == opponent.id) {
 			msg.edit({
 				content: positions.ended1,
 				components: componentsArray,
 			});
-			return button.reply({ content: `<@${opponent.id}> hat gewonnen! :tada:` });
+			return button.reply({ content: `<@${opponent.id}> won!` });
 		}
 	},
 };

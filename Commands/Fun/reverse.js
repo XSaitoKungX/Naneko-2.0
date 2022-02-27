@@ -6,7 +6,7 @@ module.exports = {
   run: async (client, message, args) => {
     let str = args.join(" ");
     if (!str) {
-      return message.channel.send("🚫 | Bitte geben Sie einen Text ein, der rückgängig gemacht werden soll!");
+      return message.channel.send("Enter some text to be reversed");
     }
     message.channel.send(str.split("").reverse().join(""));
   },

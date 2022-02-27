@@ -31,7 +31,7 @@ module.exports = {
       )
       .addField(
         "About Naneko-2.0",
-        "Naneko-2.0 is an open-source multi-purpose discord bot with features like moderation, music, logging, welcomer and so much more!\nYou can find the link to the [GitHub Repo Here](https://github.com/Simpleboy353/Naneko-2.0)"
+        "Naneko-2.0 is an open-source multi-purpose discord bot with features like moderation, music, logging, welcomer and so much more!\nYou can find the link to the [GitHub Repo Here](https://github.com/XSaitoKungX/Naneko-2.0)"
       )
       .addField(
         "Some Useful Links",

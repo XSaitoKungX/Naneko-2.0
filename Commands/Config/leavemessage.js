@@ -7,7 +7,7 @@ module.exports = {
   run: async (client, message, args) => {
     const text = args.join(" ");
     if (!args[0]) {
-      return message.channel.send(`\`Usage: n.leavemessage <Text|off>\``);
+      return message.channel.send(`\`Usage: =leavemessage <Text|off>\``);
     }
     if (text !== "off") {
       const data = await prefixModel.findOne({
@@ -23,14 +23,14 @@ module.exports = {
           GuildID: message.guild.id,
         });
         newData.save();
-        message.channel.send(`Ich habe Leave-Message jetzt auf --> \n${newData.ByeMsg} eingestellt.`);
+        message.channel.send(`Leave Message eingestellt auf: \n${newData.ByeMsg}`);
       } else if (!data) {
         let newData = new prefixModel({
           ByeMsg: args.join(" "),
           GuildID: message.guild.id,
         });
         newData.save();
-        message.channel.send(`Ich habe Leave-Message jetzt auf --> \n${newData.ByeMsg} eingestellt.`);
+        message.channel.send(`Leave Message eingestellt auf: \n${newData.ByeMsg}`);
       }
     } else if (text === "off") {
       const data2 = await prefixModel.findOne({
@@ -42,9 +42,9 @@ module.exports = {
           GuildID: message.guild.id,
         });
 
-        return message.channel.send(`Leave-Message wurde erfolgreich deaktiviert!`);
+        return message.channel.send(`✅ | Leave Message ist erfolgreich deaktiviert!`);
       } else if (!data2) {
-        return message.channel.send(`🚫 | Leave-Message-Channel wurde noch nicht eingerichtet! Bitte richten Sie zuerst einen Leave-Message-Channel ein und dann versuchen Sie es nochmal :)`);
+        return message.channel.send(`🚫 | Leave Message ist noch nicht eingestellt. Bitte versuche es später nochmal!`);
       }
     }
   },

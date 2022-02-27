@@ -15,7 +15,7 @@ module.exports = async(interaction, client) => {
         })
 
         if (!data) {
-            msg.edit("Bitte senden Sie die **CHANNEL ID**, um als Willkommenskanal eingerichtet zu werden")
+            msg.edit("Please send the **CHANNEL ID** to be setup as Welcome channel")
 
             const filter = (m) => m.author.id === interaction.member.id
 
@@ -28,7 +28,7 @@ module.exports = async(interaction, client) => {
 
                 let channel = interaction.guild.channels.cache.get(channelID)
 
-                if (!channel) return msg.edit("Ich konnte diesen Kanal leider nicht finden!")
+                if (!channel) return msg.edit("Couldn't find that channel!")
 
                 let newData = new welcomeData({
                     Welcome: channelID,
@@ -39,7 +39,7 @@ module.exports = async(interaction, client) => {
 
                 await collector.stop()
     
-                return msg.edit(`Welcome channel ist eingestellt auf --> ${interaction.guild.channels.cache.get(channelID)}`)
+                return msg.edit(`Welcome channel is set to ${interaction.guild.channels.cache.get(channelID)}`)
             })
 
             collector.on('end', async(collected, returnValue) => {
@@ -51,7 +51,7 @@ module.exports = async(interaction, client) => {
                 GuildID: interaction.guild.id
             })
 
-            return msg.edit(`Welcome channel wurde erfolgreich gelöscht!!`)
+            return msg.edit(`Welcome channel has been removed!`)
         }
     }
 }

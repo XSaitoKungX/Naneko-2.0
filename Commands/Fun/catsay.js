@@ -8,11 +8,11 @@ module.exports = {
     message.delete();
     const state = "enabled";
     if (state === "disabled") {
-      return message.channel.send("🚫 | Befehl wurde vorerst deaktiviert!");
+      return message.channel.send("Command has been disabled for now");
     }
     const msg = args.join(" ");
     if (!msg) {
-      return message.channel.send("Was soll die Katze sagen??");
+      return message.channel.send("What you want the cat to say?");
     }
     message.channel.send({
       files: [

@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'football',
-	aliases: ['fb'],
+	aliases: [],
 	run: async (client, message, args) => {
 		const positions = {
 			left: '_ _                   🥅🥅🥅\n_ _                   🕴️\n      \n_ _                         ⚽',
@@ -18,20 +18,20 @@ module.exports = {
 					{
 						type: 2,
 						style: 'SECONDARY',
-						custom_id: 'links',
-						label: 'Links',
+						custom_id: 'left',
+						label: 'Left',
 					},
 					{
 						type: 2,
 						style: 'PRIMARY',
-						custom_id: 'mittel',
-						label: 'Mittel',
+						custom_id: 'middle',
+						label: 'Middle',
 					},
 					{
 						type: 2,
 						style: 'SECONDARY',
-						custom_id: 'rechts',
-						label: 'Rechts',
+						custom_id: 'right',
+						label: 'Right',
 					},
 				],
 			},
@@ -61,11 +61,11 @@ module.exports = {
 
 		if(button.customId !== Object.keys(positions)[randomized]) {
 			gameEnded = true;
-			return button.reply({ content: 'Glückwunsch, Sie haben gewonnen! :tada:' });
+			return button.reply({ content: 'You won!' });
 		}
 		else {
 			gameEnded = true;
-			return button.reply({ content: 'Sie haben leider verloren... Versuchen Sie es später nochmal.' });
+			return button.reply({ content: 'You lose...' });
 		}
 	},
 };

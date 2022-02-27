@@ -8,13 +8,13 @@ module.exports = {
   run: async (client, message, args) => {
     const fetchedChannel = message.mentions.channels.first();
     if (!fetchedChannel) {
-      return message.channel.send("`Usage: n.delchannel <channel>`");
+      return message.channel.send("`Usage: =delchannel <channel>`");
     }
     fetchedChannel.delete();
 
     const embed = new Discord.MessageEmbed()
-      .setTitle("**Channel Updates**")
-      .setDescription("Kanal wurde gelöscht!")
+      .setTitle("Channel Updates")
+      .setDescription("Channel has been deleted")
       .setColor("RANDOM");
 
     await message.channel.send({ embeds: [embed] });

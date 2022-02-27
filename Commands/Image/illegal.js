@@ -13,9 +13,9 @@ module.exports = {
           `${message.author.username} Cooldown..`,
           message.author.displayAvatarURL
         )
-        .setDescription(`🚫 | Sie müssen 10s warten, bis Sie wieder diesen Command benutzen können!!`)
+        .setDescription(`You need to wait 10 seconds!`)
         .setColor(`RED`)
-        .setFooter(`Diese Nachricht wird in 10 Sekunden gelöscht..`);
+        .setFooter(`This message will be deleted in 10 seconds..`);
       return message.channel.send(cooldownemb).then((message) => {
         setTimeout(() => message.delete(), 10000);
       });
@@ -35,15 +35,15 @@ module.exports = {
       `.gif`;
     if (!args1) {
       return message.reply(
-        "Sie müssen einen Text angeben, um es illegal zu machen"
+        "You need to provide some text for making it illegal"
       );
     }
     if (meow.length > 1) {
-      return message.reply("Es kann immer nur eines illegal gemacht werden");
+      return message.reply("Only one thing can be made illegal at a time");
     }
     const emb = new Discord.MessageEmbed();
     emb.setAuthor(
-      "Trump hat jetzt " + meow + " gemacht: " + " Illegal!",
+      "Trump has now made " + meow + " illegal!",
       "http://blog.adsy.me/wp-content/uploads/2016/11/angry-side-face-trump-transparent.png"
     );
     emb.setImage(illegal);
