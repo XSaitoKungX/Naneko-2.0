@@ -5,11 +5,13 @@ const { Client, Collection, Intents, MessageEmbed } = require("discord.js");
 const { DEFAULT_PREFIX, BOT_TOKEN, ERROR_LOGS_CHANNEL, ALEXFLIPNOTE_API_KEY, YT_COOKIE } = require("./config.json");
 const { loadCommands } = require("./handler/loadCommands");
 const { loadEvents } = require("./handler/loadEvents");
-const { loadSlashCommands } = require("./handler/loadSlashCommands")
+const { loadSlashCommands } = require("./handler/loadSlashCommands");
 const { loadPlayerEvents } = require("./handler/loadPlayerEvents");
 const { DiscordTogether } = require('discord-together')
-const { Player } = require('discord-player')
-const Enmap = require("enmap")
+const { Player } = require('discord-player');
+const Enmap = require("enmap");
+const nekoclient = require("nekos.life");
+const neko = new nekoclient();
 
 const client = new Client({
   allowedMentions: { parse: ["users", "roles"] },

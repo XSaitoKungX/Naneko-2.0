@@ -25,12 +25,25 @@ module.exports = async(interaction, client) => {
             const funEmbed = new Discord.MessageEmbed()
         .setTitle("Fun Commands")
         .setDescription(
-          "`8ball`, `ascii`, `clap`, `clyde`, `cowsay`, `dab`, `emojify`, `fliptext`, `greentext`, `hack`, `howgay`, `hug`, `joke`, `kill`, `orangetext`, `pokeimg`, `pp`, `respect`, `reverse`, `roast`, `slap`, `trivia`, `urban`, `vaportext`, `yomama`"
+          "`8ball`, `ascii`, `cat`, `catsay`, `clap`, `cowsay`, `cumart`, `dab`, `dog`, `emojify`, `enlargemoji`, `fact`, `fliptext`, `greentext`, `hack`, `howgay`, `joke`, `lizard`, `meme`, `nitro`, `orangetext`, `owofy`, `pokeimg`, `pp`, `respect`, `reverse`, `roast`, `smug`, `spoiler`, `vaportext`, `wallpaper`, `why`, `yomama`"
         )
         .setColor("RANDOM");
 
         await msg.edit({ embeds: [funEmbed] });
 
+        } else if (interaction.values[0] === "animation") {
+
+          await interaction.deferUpdate()
+
+          const animationEmbed = new Discord.MessageEmbed()
+          .setColor("RANDOM")
+          .setTitle("Animation Commands")
+          .setDescription(
+            "`baka`, `cuddle`, `feed`, `hug`, `kill`, `kiss`, `neko`, `nekogif`, `pat`, `poke`, `randomavatar`, `slap`, `tickle`, `waifu`"
+          )
+
+          await msg.edit({ embeds: [animationEmbed]})
+        
         } else if (interaction.values[0] === "image") {
 
             await interaction.deferUpdate()
@@ -48,10 +61,10 @@ module.exports = async(interaction, client) => {
  
          await interaction.deferUpdate();
  
-         const musicEmbed = new Discord.MessageEmbed()
-         .setTitle(`Music Commands`)
-         .setDescription("`clearqueue`, `filter`, `filter list`, `info`, `jump`, `loop`, `lyrics`, `move`, `mute`, `pause`, `play`, `previoustrack`, `queue`, `remove`, `resume`, `unmute`, `volume`, `youtube`\n\n```Note: Music commands work only with slash commands!```")
-         .setColor("BLUE")
+            const musicEmbed = new Discord.MessageEmbed()
+            .setTitle(`Music Commands`)
+            .setDescription("`clearqueue`, `filter`, `filter list`, `info`, `jump`, `loop`, `lyrics`, `move`, `mute`, `pause`, `play`, `previoustrack`, `queue`, `remove`, `resume`, `unmute`, `volume`, `youtube`\n\n```Note: Music commands work only with slash commands!```")
+            .setColor("BLUE")
  
          await msg.edit({ embeds: [musicEmbed] })
 
@@ -60,11 +73,11 @@ module.exports = async(interaction, client) => {
             await interaction.deferUpdate()
 
             const infoEmbed = new Discord.MessageEmbed()
-        .setTitle("Info Commands")
-        .setDescription(
-          "`botinfo`, `emojiid`, `help`, `invite`, `ping`, `policy`, `report`, `userinfo`, `userid`, `serverinfo`, `suggest`"
+            .setTitle("Info Commands")
+            .setDescription(
+              "`botinfo`, `emojiid`, `help`, `invite`, `ping`, `policy`, `report`, `userinfo`, `userid`, `serverinfo`, `suggest`"
         )
-        .setColor("RANDOM");
+            .setColor("RANDOM");
 
         await msg.edit({ embeds: [infoEmbed] })
 
@@ -94,7 +107,7 @@ module.exports = async(interaction, client) => {
               const nsfwEmbed = new Discord.MessageEmbed()
               .setTitle("NSFW Commands")
               .setDescription(
-                  "`4k`, `anal`, `ass`, `blowjob`, `boobs`, `cumsluts`, `erokemo`, `danbooru`, `kitsune`, `hentai`, `hentaiass`, `hentaithigh`, `gonewild`, `milf`, `feetgif`, `pussy`, `porngif`, `urban`, `thigh`, `lewd`"
+                  "`4k`, `anal`, `ass`, `blowjob`, `boobs`, `cumsluts`, `danbooru`, `erokemo`, `feet`, `feetgif`, `femdom`, `foxgirl`, `futanari`, `gasm`, `girlsolo`, `girlsologif`, `gonewild`, `hentai`, `hentaiass`, `hentaigif`, `hentaithigh`, `holo`, `keta`, `kitsune`, `kuni`, `lesbian`, `lewd`, `milf`, `nsfwavatar`, `nsfwneko`, `porngif`, `pussy`, `pussyart`, `pussywank`, `spank`, `thigh`, `tits`, `trap`, `yuri`,"
               )
               .setColor("RANDOM");
 
@@ -104,34 +117,34 @@ module.exports = async(interaction, client) => {
             await interaction.deferUpdate()
 
             const utilityEmbed = new Discord.MessageEmbed()
-        .setTitle("Utility Commands")
-        .setDescription(
-          "`avatar`, `animesearch`, `announce`, `calculator`, `clear`, `createrole`, `delchannel`, `delrole`, `enlargemoji`, `esay`, `giverole`, `google`, `imdb`, `lock`, `newtext`, `newvoice`, `nickname`, `poll`, `removerole`, `say`, `servericon`, `serverinfo`, `suggestion`, `translate`, `unlock`, `weather`, `wiki`"
-        )
-        .setColor("RANDOM");
+            .setTitle("Utility Commands")
+            .setDescription(
+              "`avatar`, `animesearch`, `announce`, `calculator`, `clear`, `createrole`, `delchannel`, `delrole`, `enlargemoji`, `esay`, `giverole`, `google`, `imdb`, `lock`, `newtext`, `newvoice`, `nickname`, `poll`, `removerole`, `say`, `servericon`, `serverinfo`, `suggestion`, `translate`, `unlock`, `weather`, `wiki`"
+            )
+            .setColor("RANDOM");
 
         await msg.edit({ embeds: [utilityEmbed] })
 
       } else if (interaction.values[0] === "game") {
             await interaction.deferUpdate()
 
-          const gameEmbed = new Discord.MessageEmbed()
-        .setTitle("Game Commands")
-        .setDescription(
-          "`connect4`, `catchthefish`, `chaoswords`, `fasttype`, `fight`, `football`, `gunfight`, `guessthenumber`, `guessthepokemon`, `lieswatter`, `neverhaveiever`, `quickclick`, `rps`, `shuffleguess`, `snake`, `trivia`, `ttt`"
-        )
-        .setColor("RANDOM");
+            const gameEmbed = new Discord.MessageEmbed()
+            .setTitle("Game Commands")
+            .setDescription(
+              "`connect4`, `catchthefish`, `chaoswords`, `fasttype`, `fight`, `football`, `gunfight`, `guessthenumber`, `guessthepokemon`, `lieswatter`, `neverhaveiever`, `quickclick`, `rps`, `shuffleguess`, `snake`, `trivia`, `ttt`"
+            )
+            .setColor("RANDOM");
 
         await msg.edit({ embeds: [gameEmbed] })
       } else if (interaction.values[0] === "activities") {
             await interaction.deferUpdate()
             
-        const activityEmbed = new Discord.MessageEmbed()
-        .setTitle("Activity Commands")
-        .setDescription(
-          "`awkword`, `betrayal`, `chess`, `doodlecrew`, `fishington`, `lettertile`, `poker`, `spellcast`, `youtube`"
-        )
-        .setColor("RANDOM")
+            const activityEmbed = new Discord.MessageEmbed()
+            .setTitle("Activity Commands")
+            .setDescription(
+              "`awkword`, `betrayal`, `chess`, `doodlecrew`, `fishington`, `lettertile`, `poker`, `spellcast`, `youtube`"
+            )
+            .setColor("RANDOM")
 
         await msg.edit({ embeds: [activityEmbed]})
       }

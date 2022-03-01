@@ -12,7 +12,7 @@ module.exports = {
                 const embed = new Discord.MessageEmbed()
                 .setColor('RANDOM')
                 .setTitle("👐 Umarmung")
-                .setDescription(`**${message.author.username}** umarmt sich selbst.\nKann jemand **${message.author.username}** umarmen? :pleading:`)
+                .setDescription(`**${message.author.username}** umarmt sich selbst.\nKann jemand **${message.author.username}** umarmen? :pleading_face:`)
                 .setImage(GIF.url)
                 message.channel.send({ embeds: [embed] });
             }

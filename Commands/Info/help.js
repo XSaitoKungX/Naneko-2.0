@@ -61,6 +61,12 @@ module.exports = {
           emoji: "🎮"
         },
         {
+          label: "Animation",
+          description: "Zeig alle Animation Commands an",
+          value: "animation",
+          emoji: "🎭"
+        },
+        {
           label: "Fun",
           description: "Zeigt alle Fun Commands an",
           value: "fun",

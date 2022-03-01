@@ -3,16 +3,15 @@ const nekoclient = require('nekos.life');
 const neko = new nekoclient();
 
 module.exports = {
-    name: 'cuddle',
+    name: 'feed',
     run: async (client, message, args) => {
         if (!message.guild) return;
             if (message.mentions.members.size === 0) {
             async function no_ping() {
-                const GIF = await neko.sfw.cuddle();
+                const GIF = await neko.sfw.feed();
                 const embed = new Discord.MessageEmbed()
                 .setColor('RANDOM')
-                .setTitle("👐 Knuddeln")
-                .setDescription(`**${message.author.username}** knuddelt sich selbst!\nEr/Sie braucht dringend von jemanden geknuddelt werden!`)
+                .setTitle(`${message.author.username} füttert sich selbst. Wie traurig :pleading_face:`)
                 .setImage(GIF.url)
                 message.channel.send({ embeds: [embed] });
             }
@@ -21,11 +20,10 @@ module.exports = {
             if (message.mentions.members.size !== 0) {
             async function ping() {
             const member = message.mentions.members.first();
-            const GIF = await neko.sfw.cuddle();
+            const GIF = await neko.sfw.feed();
             const embed = new Discord.MessageEmbed()
             .setColor('RANDOM')
-            .setTitle("👐 Knuddeln")
-            .setDescription(`**${member.user.username}**, du wurdest von **${message.author.username}** geknuddelt!\nIst das nicht Süsss?`)
+            .setTitle(`**${member.user.username}**, du wurdest von **${message.author.username}** gefüttert. Ihr seid echt Süß~ :smiling_face_with_3_hearts:`)
             .setImage(GIF.url)
             message.channel.send({ embeds: [embed] });
             }
