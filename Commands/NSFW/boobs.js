@@ -1,5 +1,7 @@
 const { MessageEmbed } = module.require('discord.js');
 const fetch = require('node-fetch');
+const nekoclient = require('nekos.life');
+const neko = new nekoclient();
 
 module.exports = {
   name: "boobs",
