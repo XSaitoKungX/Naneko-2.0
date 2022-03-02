@@ -12,8 +12,8 @@ module.exports = async (message) => {
       message.content.match("www.")
     ) {
       message.delete();
-      let msg = message.channel.send("No links allowed while anti-link is active!").then((msg) => {
-          let time = "2s";
+      let msg = message.channel.send("🚫 | Links sind hier nicht erlaubt, da Antilink auf diesem Server aktiv ist!").then((msg) => {
+          let time = "5s";
           setTimeout(function () {
             msg.delete();
           }, ms(time));

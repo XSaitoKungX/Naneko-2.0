@@ -12,7 +12,7 @@ module.exports = async(message) => {
 
     const embed = new MessageEmbed()
     .setTitle("Message Deleted")
-    .setDescription(`${message.author.username}'s messages was deleted in ${message.channel}`)
+    .setDescription(`${message.author.username}'s Nachrichten wurden in ${message.channel} gelöscht!`)
     .addField('Message Content', `${message.content}`)
     .setColor("GREEN")
     .setTimestamp()

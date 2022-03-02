@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const discord = require("discord.js");
 const got = require("got"); //MAKE SURE TO INSTALL THE PACKAGE "GOT" ELSE THE CODE WOULD NOT WORK
 const nekoclient = require('nekos.life');
 const neko = new nekoclient();
@@ -29,7 +29,7 @@ module.exports = {
             .setImage(GIF.url)
             message.channel.send({ embeds: [embed] })
         .catch(console.error)}
-            anal();
+            blowjob();
     } catch (err) {
       const errorlogs = client.channels.cache.get("912404023280304148");
 

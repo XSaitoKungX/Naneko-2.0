@@ -11,12 +11,12 @@ module.exports = async(thread) => {
     const embed = new MessageEmbed()
     .setTitle('Thread Deleted')
     .setDescription(`
-Name: ${thread.name}
-ID: ${thread.id}
-Owner: <@!${thread.ownerId}>
-Member Count: ${thread.memberCount}
-Messages Sent: ${thread.messages.cache.size}
-Parent Channel: ${thread.parent.name}`)
+        Name: ${thread.name}
+        ID: ${thread.id}
+        Owner: <@!${thread.ownerId}>
+        Member Count: ${thread.memberCount}
+        Messages Sent: ${thread.messages.cache.size}
+        Parent Channel: ${thread.parent.name}`)
     .setColor("RED")
     .setTimestamp()
 

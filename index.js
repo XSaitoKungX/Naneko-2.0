@@ -7,10 +7,10 @@ const { loadCommands } = require("./handler/loadCommands");
 const { loadEvents } = require("./handler/loadEvents");
 const { loadSlashCommands } = require("./handler/loadSlashCommands");
 const { loadPlayerEvents } = require("./handler/loadPlayerEvents");
-const { DiscordTogether } = require('discord-together')
+const { DiscordTogether } = require('discord-together');
 const { Player } = require('discord-player');
 const Enmap = require("enmap");
-const nekoclient = require("nekos.life");
+const nekoclient = require('nekos.life');
 const neko = new nekoclient();
 
 const client = new Client({

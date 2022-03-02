@@ -11,10 +11,10 @@ module.exports = async(thread) => {
     const embed = new MessageEmbed()
     .setTitle('Thread Created')
     .setDescription(`
-Name: ${thread.name}
-ID: ${thread.id}
-Created By: ${thread.guild.members.cache.get(thread.ownerId)}
-Parent Channel: ${thread.parent.name}`)
+        Name: ${thread.name}
+        ID: ${thread.id}
+        Created By: ${thread.guild.members.cache.get(thread.ownerId)}
+        Parent Channel: ${thread.parent.name}`)
     .setColor("GREEN")
     .setTimestamp()
 

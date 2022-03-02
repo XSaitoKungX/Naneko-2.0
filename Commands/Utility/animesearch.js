@@ -4,8 +4,8 @@ const malScraper = require('mal-scraper');
 module.exports = {
   name: "animesearch",
   category: "utility",
-description: "Get info about an anime",
-usage: "[command | Anime]",
+  description: "Get info about an anime",
+  usage: "[command | Anime]",
 run: async (client, message, args) => {
         const search = `${args}`;
         if(!search)

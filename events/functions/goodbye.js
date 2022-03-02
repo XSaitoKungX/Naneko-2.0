@@ -25,7 +25,7 @@ module.exports = async (member) => {
 
      let embed = new MessageEmbed()
        .setDescription(`${leavemessage}`)
-       .setColor("GREEN");
+       .setColor("RANDOM");
 
      let channel = data.Bye;
 
@@ -35,11 +35,14 @@ module.exports = async (member) => {
        .setTitle("Goodbye")
        .setThumbnail(member.user.avatarURL())
        .setDescription(
-         `**${member.user.tag}** just left the server! We hope they return back soon!`
+         `Das ist wirklich eine Schande, dass **${member.user.tag}** uns verlassen hat. Wir dachten wir könnten gemeinsam Spaß haben, aber naja dagegen kann man nichts machen.\n
+         Wir wünschen dir alles gute und viel Glück noch. Wer weiß vielleicht sehen wir uns ja irgendwann mal wieder. Vielleicht wieder hier Oder vielleicht auch auf einem anderen Server.\n\n
+         Falls ihr eine Idee habt, wie wir unserer Server schöner und besser gestalten können, dann hau einfach raus! Dafür haben wir euch einen Kanal bereit gestellt.
+         Wenn ihr eure Ideen lieber Privat bei **꧁Saito꧂#6248** äußern/mitteilen wollt, seine DM ist immer öffen.\nNaja lange Rede, kurzer Sinn, ich sage in dem Sinne **Tschau**!`
        )
-       .setFooter(`We now have ${member.guild.memberCount} members!`)
+       .setFooter(`Wir haben jetzt noch ${member.guild.memberCount} Members!`)
        .setThumbnail(member.user.avatarURL())
-       .setColor("GREEN");
+       .setColor("RANDOM");
 
      let byechannel = data.Bye;
 

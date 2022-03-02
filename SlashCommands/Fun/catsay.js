@@ -13,7 +13,7 @@ name: "catsay",
   run: async (client, interaction, args) => {
     const state = "enabled";
     if (state === "disabled") {
-      return interaction.reply("Command has been disabled for now");
+      return interaction.reply("Command wurde erfolgreich deaktiviert! Für jetzt");
     }
     const msg = args.join(" ");
     if (!msg) {

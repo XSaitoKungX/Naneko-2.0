@@ -49,28 +49,34 @@ module.exports = {
       .setMaxValues(1)
       .addOptions([
         {
+          label: "Activities",
+          description: "Greife auf die neue Discord-Aktivitäten-Funktion zu",
+          value: "activities",
+          emoji: "🎁"
+        },
+        {
+          label: "Animation",
+          description: "Zeigt alle Animation Commands an",
+          value: "animation",
+          emoji: "🎭"
+        },
+        {
           label: "Settings",
           description: "Die Bot-Einstellungen konfigurieren",
           value: "settings",
           emoji: "🛠"
         },
         {
-          label: "Activities",
-          description: "Greifen Sie auf die neue Discord-Aktivitäten-Funktion zu",
-          value: "activities",
-          emoji: "🎮"
-        },
-        {
-          label: "Animation",
-          description: "Zeig alle Animation Commands an",
-          value: "animation",
-          emoji: "🎭"
-        },
-        {
           label: "Fun",
           description: "Zeigt alle Fun Commands an",
           value: "fun",
           emoji: "🎲"
+        },
+        {
+          label: "Games",
+          description: "Zeigt alle Games Commands an",
+          value: "game",
+          emoji: "🎮"
         },
         {
           label: "Image",
@@ -91,16 +97,16 @@ module.exports = {
           emoji: "🔒"
         },
         {
-          label: "Music",
-          description: "Zeigt alle Musik Commands an",
-          value: "music",
-          emoji: "🎵"
-        },
-        {
           label: "NSFW",
           description: "Zeigt alle NSFW Commands an",
           value: "nsfw",
           emoji: "🔞"
+        },
+        {
+          label: "Owner",
+          description: "Zeigt alle Owner Commands an",
+          value: "owner",
+          emoji: "👑"
         },
         {
           label: "Utility",
@@ -109,17 +115,17 @@ module.exports = {
           emoji: "🔧"
         },
         {
-          label: "Games",
-          description: "Zeigt alle Games Commands an",
-          value: "game",
-          emoji: "🎮"
+          label: "Music",
+          description: "Zeigt alle Musik Commands an",
+          value: "music",
+          emoji: "🎵"
         }
       ])
     )
 
     let editEmbed = new MessageEmbed()
     .setTitle('Help Menu')
-    .setDescription('Wählen Sie eine Option aus dem Menü unten!')
+    .setDescription('Wähle eine Option aus dem Menü unten aus!')
     .setColor("GREEN")
 
       message.channel.send({ embeds: [editEmbed], components: [helpMenu]}).then(msg=>{

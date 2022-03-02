@@ -38,7 +38,7 @@ module.exports = async(interaction, client) => {
 
                 await collector.stop()
     
-                return msg.edit(`Rep System has been enabled and Trade Rep Channel is set to ${interaction.guild.channels.cache.get(channelID)}`)
+                return msg.edit(`Rep System wurd erfolgreich aktiviert! and Trade Rep Channel is set to ${interaction.guild.channels.cache.get(channelID)}`)
             })
 
             collector.on('end', async(collected, returnValue) => {

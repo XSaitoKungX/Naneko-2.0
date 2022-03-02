@@ -1,8 +1,6 @@
 const Discord = module.require("discord.js");
 const NSFW = require("discord-nsfw");
 const nsfw = new NSFW();
-const nekoclient = require('nekos.life');
-const neko = new nekoclient();
 
 
 module.exports = {

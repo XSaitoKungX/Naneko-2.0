@@ -13,9 +13,9 @@ module.exports = async(oldMessage, newMessage) => {
     const embed = new MessageEmbed()
     .setTitle("Message Edited")
     .setDescription(`${newMessage.author} edited their message in ${newMessage.channel}`)
-    .addField('Jump to Message', `[Click Me](https://discord.com/channels/${newMessage.guild.id}/${newMessage.channel.id}/${newMessage.id})`)
-    .addField(`Old Message`, `${oldMessage.content}`, true)
-    .addField('New Message', `${newMessage.content}`, true)
+    .addField('Spring zu der Nachricht', `[Click Me](https://discord.com/channels/${newMessage.guild.id}/${newMessage.channel.id}/${newMessage.id})`)
+    .addField(`Alte Nachricht`, `${oldMessage.content}`, true)
+    .addField('Neue Nachricht', `${newMessage.content}`, true)
     .setColor('GREEN')
     .setTimestamp()
 

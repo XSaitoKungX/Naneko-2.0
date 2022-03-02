@@ -43,18 +43,18 @@ module.exports = async (message, cooldowns) => {
   if (!command) return;
     //command enaled thing
     if(command.enabled === false) {
-      return message.reply('This command is disabled!')
+      return message.reply('dieser Command ist deaktiviert!')
     }
     // ownerOnly thing
     if(command.ownerOnly === true) {
       if(!message.author.id === OWNER_ID) {
-        return message.reply('This command is Owner only!')
+        return message.reply('dieser Command kann leider nur der Owner benutzen!')
       }
     }
     // user permissions handler
   if (!message.member.permissions.has(command.userPerms || [])) {
     if(command.userPermError === null || command.userPermError === undefined) {
-      return message.reply(`You need  \`${command.userPerms}\` permissions to use this comand!`);
+      return message.reply(`du brauchst \`${command.userPerms}\` Berechtigung, um dieser Command benutzen zu können!`);
     } else {
       return message.reply(command.userPermError)
     }
@@ -66,7 +66,7 @@ module.exports = async (message, cooldowns) => {
   if (!message.guild.me.permissions.has(command.botPerms || [])) {
   if(command.botPermError === null || command.botPermError === undefined) {
     return message.reply(
-      `Ups :/  I need \`${command.botPerms}\` premission|s to run this command correctly`
+      `ups! :/  Ich brauche \`${command.botPerms}\` Berechtigung(en), um dieser Command ausführen zu können!`
     );
  } else {
     return message.reply(command.botPermError)
@@ -76,13 +76,13 @@ module.exports = async (message, cooldowns) => {
   if(command.guildOnly === true) {
     console.log(message.channel.type)
     if(message.channel.type === 'DM' || message.channel.type === 'GROUP_DM') {
-      return message.reply('This command is Server only!')
+      return message.reply('dieser Command kann nur auf dem Server, wo ich drauf bin, genutzt werden!')
     }
   }
     //nsfw thingy
     if(command.nsfw === true) {
       if(message.channel.nsfw === false) {
-        return message.reply('This command is NSFW only, mark the channel as nsfw for this command to work!')
+        return message.reply('dieser Command ist nur für NSFW-Channels erlaubt, gehe in der >> Kanaleinstellung >>, dann aktiviere **NSFW-Channel**, damit dieser Befehl ausgeführt werden kann!')
       }
     }
   //min args and max args thing
@@ -117,7 +117,7 @@ module.exports = async (message, cooldowns) => {
     if (now < expirationTime) {
       const timeLeft = (expirationTime - now) / 1000;
       return message.reply(
-        `please wait ${timeLeft.toFixed(
+        `bitte warte noch: ${timeLeft.toFixed(
           1
         )} more second(s) before reusing the \`${command.name}\` command.`
       );

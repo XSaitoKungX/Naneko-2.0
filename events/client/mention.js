@@ -1,4 +1,5 @@
 const prefixModel = require("../../database/guildData/prefix");
+const Discord = require("discord.js");
 
 module.exports = async (message, client) => {
   if (message.author.bot) return;
@@ -21,8 +22,15 @@ module.exports = async (message, client) => {
 
   // mentioned bot
   if (message.content ===`<@!${client.user.id}>` || message.content === `<@${client.user.id}>`) {
-    return message.channel.send(
-      `My prefix in this server is \`${PREFIX}\`\n\nTo get a list of commands, type \`${PREFIX}help\``
-    );
+
+    const embed = new Discord.MessageEmbed()
+      .setTitle("📨 | Mein Owner hat mich beauftragt, dir ein kleinen Tipp zu geben")
+      .setDescription(`Da du mich angepingt hast, gehe ich mal davon aus, dass du nicht weißt, was mein Prefix ist und dass du vielleicht Hilfe benötigst? Wenn ja, dann mach dir keine Sorge, ich werde dir einen Tipp geben, wie du an die Befehle rankommst! Als alle erstes mein Prefix auf diesen Server ist: \`${PREFIX}\`\n\nUnd um alle meine Befehle sehen zu können/ ranzukommen, benutze hierfür: \`${PREFIX}help\`\nIch hoffe ich kann dir weiterhelfen. Also dann wir sehen uns später, bye~`)
+      .setColor("RANDOM")
+      .setThumbnail(message.author.avatarURL())
+      .setFooter(`Angefördert von: ${message.author.username}`)
+      .setTimestamp()
+
+      return message.channel.send({ embeds: [embed] })
   }
 };

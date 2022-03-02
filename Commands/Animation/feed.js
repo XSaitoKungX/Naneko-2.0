@@ -11,7 +11,7 @@ module.exports = {
                 const GIF = await neko.sfw.feed();
                 const embed = new Discord.MessageEmbed()
                 .setColor('RANDOM')
-                .setTitle(`${message.author.username} füttert sich selbst. Wie traurig :pleading_face:`)
+                .setTitle(`${message.author.username} füttert sich selbst. Wie traurig :pleading:`)
                 .setImage(GIF.url)
                 message.channel.send({ embeds: [embed] });
             }

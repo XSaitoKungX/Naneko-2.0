@@ -1,7 +1,5 @@
-const Discord = require("discord.js");
+const discord = require("discord.js");
 const got = require("got"); //MAKE SURE TO INSTALL THE PACKAGE "GOT" ELSE THE CODE WOULD NOT WORK
-const nekoclient = require('nekos.life');
-const neko = new nekoclient();
 
 module.exports = {
   name: "pussy",

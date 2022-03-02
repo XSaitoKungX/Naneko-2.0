@@ -122,10 +122,10 @@ module.exports = async(queue, track, client) => {
         if (!client.utils.canModifyQueue(queue.metadata)) return;
         if (!queue.repeatMode) {
           queue.setRepeatMode(QueueRepeatMode.QUEUE)
-          queue.metadata.followUp({ content: "Loop mode has been enabled!", ephemeral: true})
+          queue.metadata.followUp({ content: "Loop mode wurd erfolgreich aktiviert!!", ephemeral: true})
         } else if (queue.repeatMode) {
           queue.setRepeatMode(QueueRepeatMode.OFF)
-          queue.metadata.followUp({ content: "Loop mode has been disabled!", ephemeral: true})
+          queue.metadata.followUp({ content: "Loop mode wurde erfolgreich deaktiviert!!", ephemeral: true})
         }
         break;
 
