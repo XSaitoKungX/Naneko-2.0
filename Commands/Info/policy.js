@@ -44,6 +44,8 @@ module.exports = {
       .setFooter(`Requested by: ${message.author.username}`)
       .setColor("RANDOM");
 
-    return message.channel.send({embeds: [embed]});
+    return message.channel.send({embeds: [embed]}).then(function (message, str) {
+      message.react("✅");
+    }).catch(function () {});
   },
 };
