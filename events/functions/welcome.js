@@ -37,7 +37,7 @@ module.exports = async (member) => {
       .setDescription(
         `Wir heißen dich herzlich Willkommen auf **${member.guild.name}**, ${member.user.mention}! 🎉🥳\n
         Du musst zuerst die Regeln und Serverbedingungen erfüllen/akzeptieren, bevor du den restlichen Channels sehen kannst oder überhaupt irgendwas machen zu können!\n
-        Wenn du dies schon gemacht hast, dann vergiss nicht dir **Selbst-Rollen** zu holen.\n
+        Wenn du dies schon gemacht hast, dann vergiss nicht dir **Selbst-Rollen** in #『:mortar_board:』selbst-rollen zu holen.\n
         Wir wünschen dir viel Spaß auf **${member.guild.name}**.`
       )
       .setFooter(`Wir haben jetzt ${member.guild.memberCount} Members`)
