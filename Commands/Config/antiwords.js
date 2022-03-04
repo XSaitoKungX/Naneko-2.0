@@ -3,6 +3,7 @@ const antiwordsSchema = require("../../database/guildData/antiwords");
 
 module.exports = {
   name: "antiwords",
+  aliases: ["antiword", "anwos"],
   userPerms: ["ADMINISTRATOR"],
   description: "Setup antilink per server!",
   run: async(client, message, args) => {
