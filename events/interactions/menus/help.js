@@ -7,7 +7,7 @@ module.exports = async(interaction, client) => {
 
   if (interaction.customId === "help_menu") {
 
-    let msg = await interaction.channel.message.fetch(interaction.message.id)
+    let msg = await interaction.channel.messages.fetch(interaction.message.id)
 
     if (interaction.values[0] === 'activities') {
 
@@ -19,7 +19,6 @@ module.exports = async(interaction, client) => {
         .setColor("RANDOM")
         .setTimestamp()
         .setThumbnail(client.user.avatarURL())
-        .setFooter(`Angefördert von: ${message.author.username}`)
 
       await msg.edit({ embeds: [activityEmbed] })
     } else if (interaction.values[0] === 'animation') {
@@ -30,6 +29,8 @@ module.exports = async(interaction, client) => {
         .setTitle("Animation Commands")
         .setDescription("`baka`, `cuddle`, `fact`, `feed`, `goose`, `hug`, `kill`, `kiss`, `lizard`, `neko`, `nekogif`, `pat`, `poke`, `randomavatar`, `respect`, `roast`, `slap`, `smug`, `tickle`, `waifu`, `wallpaper`, `why`")
         .setColor("RANDOM")
+        .setTimestamp()
+        .setThumbnail(client.user.avatarURL())
 
       await msg.edit({ embeds: [animationEmbed] });
     } else if (interaction.values[0] === 'settings') {
@@ -40,6 +41,8 @@ module.exports = async(interaction, client) => {
         .setTitle("Config Commands")
         .setDescription("`antilink`, `antiword`, `autorole`, `dashboard`, `joinchannel`, `joinmessage`, `leavechannel`, `leavemessage`, `prefix`")
         .setColor("RANDOM")
+        .setTimestamp()
+        .setThumbnail(client.user.avatarURL())
 
       await msg.edit({ embeds: [settingsEmbed] });
     } else if (interaction.values[0] === 'fun') {
@@ -50,6 +53,8 @@ module.exports = async(interaction, client) => {
         .setTitle("Fun Commands")
         .setDescription("`8ball`, `ascii`, `cat`, `catsay`, `clap`, `cowsay`, `cumart`, `dab`, `dog`, `emojify`, `enlargemoji`, `fliptext`, `gecg`, `gif`, `greentext`, `hack`, `howgay`, `joke`, `meme`, `nitro`, `orangetext`, `owofy`, `pokeimg`, `pp`, `reverse`, `spoiler`, `vaportext`, `yomama`")
         .setColor("RANDOM")
+        .setTimestamp()
+        .setThumbnail(client.user.avatarURL())
 
       await msg.edit({ embeds: [funEmbed] });
     } else if (interaction.values[0] === 'game') {
@@ -60,6 +65,8 @@ module.exports = async(interaction, client) => {
         .setTitle("Game Commands")
         .setDescription("`catchthefish`, `chaosword`, `connect4`, `fasttype`, `fight`, `football`, `guessthenumber`, `guessthepokemon`, `gunfight`, `lieswatter`, `neverhaveiever`, `quickclick`, `rps`, `shuffleguess`, `snake`, `trivia`, `ttt`")
         .setColor("RANDOM")
+        .setTimestamp()
+        .setThumbnail(client.user.avatarURL())
 
       await msg.edit({ embeds: [gameEmbed] });
     } else if (interaction.values[0] === 'image') {
@@ -70,6 +77,8 @@ module.exports = async(interaction, client) => {
         .setTitle("Image Commands")
         .setDescription("`achievement`, `afraid`, `alert`, `amazeme`, `amiajoke`, `bad`, `biden`, `challenge`, `changemymide`, `clyde`, `creatememe`, `cryingfloor`, `disastergirl`, `dockofshame`, `doge`, `drake`, `facepalm`, `feelsgood`, `illegal`, `keanu`, `memetemplates`, `phb`, `scroll`, `textimage`, `trash`, `trigger`, `trumptweet`, `wasted`, `wideavatar`")
         .setColor("RANDOM")
+        .setTimestamp()
+        .setThumbnail(client.user.avatarURL())
 
       await msg.edit({ embeds: [imageEmbed] });
     } else if (interaction.values[0] === 'info') {
@@ -80,6 +89,8 @@ module.exports = async(interaction, client) => {
         .setTitle("Info Commands")
         .setDescription("`avatar`, `botinfo`, `emojiid`, `help`, `invite`, `ping`, `policy`, `report`, `stats`, `suggest`, `userid`")
         .setColor("RANDOM")
+        .setTimestamp()
+        .setThumbnail(client.user.avatarURL())
 
       await msg.edit({ embeds: [infoEmbed] });
     } else if (interaction.values[0] === 'moderation') {
@@ -90,6 +101,8 @@ module.exports = async(interaction, client) => {
         .setTitle("Moderation Commands")
         .setDescription("`annouce`, `ban`, `clear`, `createrole`, `delchannel`, `delrole`, `dm`, `esay`, `giverole`, `kick`, `lock`, `mute`, `newtext`, `newvoice`, `nickname`, `poll`, `removerole`, `softban`, `tempmute`, `unlock`, `unmute`")
         .setColor("RANDOM")
+        .setTimestamp()
+        .setThumbnail(client.user.avatarURL())
 
       await msg.edit({ embeds: [modEmbed] });
     } else if (interaction.values[0] === 'nsfw') {
@@ -108,6 +121,8 @@ module.exports = async(interaction, client) => {
         .setTitle("NSFW Commands")
         .setDescription("`4k`, `anal`, `ass`, `blowjob`, `boobs`, `cumslut`, `danbooru`, `erokemo`, `feet`, `feetgirl`, `femdom`, `foxgirl`, `futanari`, `gasm`, `girlsolo`, `girlsologif`, `gonewild`, `hentai`, `hentaiass`, `hentaigif`, `hentaithigh`, `holo`, `keta`, `kitsune`, `kuni`, `lesbian`, `lewd`, `milf`, `nsfwavatar`, `nsfwneko`, `nsfwnekogif`, `porngif`, `pussy`, `pussyart`, `pussywank`, `spank`, `thigh`, `tits`, `trap`, `yuri`")
         .setColor("RANDOM")
+        .setTimestamp()
+        .setThumbnail(client.user.avatarURL())
 
       await msg.edit({ embeds: [nsfwEmbed] });
     } else if (interaction.values[0] === 'owner') {
@@ -118,6 +133,8 @@ module.exports = async(interaction, client) => {
         .setTitle("Owner Commands")
         .setDescription("`botserver`, `eval`, `nuke`, `shutdown`")
         .setColor("RANDOM")
+        .setTimestamp()
+        .setThumbnail(client.user.avatarURL())
 
       await msg.edit({ embeds: [ownerEmbed] });
     } else if (interaction.values[0] === 'utility') {
@@ -128,6 +145,8 @@ module.exports = async(interaction, client) => {
         .setTitle("Utility Commands")
         .setDescription("`animesearch`, `calculator`, `google`, `imdb`, `say`, `servericon`, `serverinfo`, `suggestion`, `translate`, `urban`, `userinfo`, `weather`, `wiki`")
         .setColor("RANDOM")
+        .setTimestamp()
+        .setThumbnail(client.user.avatarURL())
 
       await msg.edit({ embeds: [utilityEmbed] });
     } else if (interaction.values[0] === 'music') {
@@ -138,6 +157,8 @@ module.exports = async(interaction, client) => {
         .setTitle("Music Commands")
         .setDescription("`clearqueue`, `filter`, `filter list`, `info`, `jump`, `loop`, `lyrics`, `move`, `mute`, `pause`, `play`, `previoustrack`, `queue`, `remove`, `resume`, `unmute`, `volume`, `youtube`\n\n```Note: Musik Commands können momentan leider nur mit Slash-Commands verwendet werden! Wir arbeiten noch daran die Commands auch mit dem Prefix verwenden zu können. Es tut uns leid für diese Umstände!```")
         .setColor("RANDOM")
+        .setTimestamp()
+        .setThumbnail(client.user.avatarURL())
 
       await msg.edit({ embeds: [musicEmbed] });
     }
