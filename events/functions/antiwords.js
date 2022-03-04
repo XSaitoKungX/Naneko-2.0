@@ -1,4 +1,6 @@
 const antiwordsData = require('../../database/guildData/antiwords')
+const ms = require("ms")
+
   module.exports = async (message) => {
     const antiwords = await antiwordsData.findOne({
       GuildID: message.guild.id,
@@ -15,13 +17,13 @@ const antiwordsData = require('../../database/guildData/antiwords')
       message.content.match("fuck") || 
       message.content.match("hure")) {
         message.delete();
-        message.reply("**Schimpfwörter sind auf diesem Server nicht erlaubt. Bitte hör auf damit! Ich werde dich erstmal nur warnen, aber falls es öfters vorkommt, dann wirst du umgehend bestraft.\nDu könntest gekickt werden, in schlimmsten Fall sogar gebannt!**").then(msg => {
-          let time = '5s'
+        let msg = message.channel.send("🚫 | **Schimpfwörter sind auf diesem Server nicht erlaubt. Bitte hör auf damit! Ich werde dich erstmal nur warnen, aber falls es öfters vorkommt, dann wirst du umgehend bestraft.\nDu könntest gekickt werden, in schlimmsten Fall sogar gebannt!**").then((msg => {
+          let time = '10s'
           setTimeout(function () {
             msg.delete();
           }, ms(time));
         })
-      } else {
+        )} else {
         return;
       }
     } else if (!antiwords) {
