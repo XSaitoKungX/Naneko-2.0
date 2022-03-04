@@ -18,7 +18,7 @@ module.exports = async (message, client) => {
 
 
 
-	let words = ["ft", "lf", "for trade", "looking for"]
+	let words = ["ft", "lf", "for trade", "looking for", "like", "primium", "private", "vip", "naneko"]
 	let tradeRepChannel = await data.ChannelID
 	let found;
 
