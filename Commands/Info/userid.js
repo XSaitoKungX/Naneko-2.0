@@ -4,7 +4,7 @@ module.exports = {
   name: "userid",
   botPerms: ["EMBED_LINKS"],
   run: async (client, message, args) => {
-    var mention = message.guild.member(message.mentions.users.first());
+    var mention = message.mentions.users.first();
     if (!mention) return message.channel.send("🚫 | Du musst jemanden erwähnen, um deren ID zu bekommen!!");
     const lolicon = mention.user.avatarURL;
     const lolid = new Discord.MessageEmbed()
