@@ -16,9 +16,9 @@ module.exports = {
 
             if (!message.guild) return;
                 async function pussyart() {
-                const GIF = await neko.sfw.pussyart();
+                const GIF = await neko.nsfw.pussyArt();
                 const embed = new Discord.MessageEmbed()
-                .setColor('RANDOM')
+                .setColor("RANDOM")
                 .setTitle(`**${message.author.username}**, hier ist ein zufälliges Pussyart-Bild/GIF`)
                 .setImage(GIF.url)
                 message.channel.send({ embeds: [embed] });
